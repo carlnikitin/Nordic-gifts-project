@@ -1,6 +1,6 @@
 # Nordic-gifts-project
 
-### How to use our project
+### How to use our project:
 
 #### 1. cd nordic-gifts-project
 #### 2. npm install
