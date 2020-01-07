@@ -5,32 +5,38 @@
     <HelloWorld style="margin-top:20px !important" msg="Vali sobivad elemendid, et luua meelepärane suveniir" />
     <img style="margin-top: 45px !important; width: 320px" alt="Nordic gifts logo" src="./assets/elf.png" />
     <br>
+    <VueNextLevelScroll target="#text">
     <div class="wrapper">
-      <a href="#service">	
+      <button type=button>
       <div class="arrow">
       <ul>
         <li></li>
         <li></li>
       </ul>
       </div>
-      </a>
+      </button>
     </div>
-    <textarea rows="7" v-model="message" placeholder="Add multiple lines"></textarea>
+    </VueNextLevelScroll>
+    <textarea id="text" rows="7" v-model="message" placeholder="Add multiple lines"></textarea>
   </div>
 </template>
 
 <script>
+import VueNextLevelScroll from "vue-next-level-scroll/"
 import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    HelloWorld,
+    VueNextLevelScroll
   }
 };
+
 </script>
 
 <style>
+/*All*/
 * {
   padding: 0px !important;
   margin: 0px !important;
