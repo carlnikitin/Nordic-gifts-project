@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img style="width: 250px" alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to our project" />
+    <HelloWorld msg="Vali sobivad elemendid, et luua meelepärane suveniir" />
   </div>
 </template>
 
@@ -18,11 +18,13 @@ export default {
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Apple Chancery", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #707070;
   margin-top: 60px;
+  font-weight: 300;
+  font-size: 14px;
 }
 </style>
