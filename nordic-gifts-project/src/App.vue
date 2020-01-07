@@ -129,7 +129,7 @@ font-family: 'Charm', cursive;
 font-size: 20px;
 width: 35%;
 display: inline-block;
-margin-top: 300px !important;
+margin-top: calc(100vh / 4) !important;
 }
 textarea::-webkit-input-placeholder {
 font-family: 'Charm', cursive;
