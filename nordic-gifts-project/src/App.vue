@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <link href="https://fonts.googleapis.com/css?family=Charm&display=swap" rel="stylesheet">
-<<<<<<< HEAD
     <img style="margin-top: 25px; width: 150px" alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Vali sobivad elemendid, et luua meelepärane suveniir" />
      <img style="margin-top: 45px; width: 320px" alt="Nordic gifts logo" src="./assets/elf.png" />
@@ -9,7 +8,6 @@
       <a href="#"><span></span>.......</a>
     </section>
     <textarea rows="7" v-model="message" placeholder="add multiple lines"></textarea>
-=======
     <img style="margin-top: 25px !important; width: 250px" alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld style="margin-top:20px !important" msg="Vali sobivad elemendid, et luua meelepärane suveniir" />
     <img style="margin-top: 45px !important; width: 320px" alt="Nordic gifts logo" src="./assets/elf.png" />
@@ -25,7 +23,6 @@
       </a>
     </div>
     <textarea rows="7" v-model="message" placeholder="Add multiple lines"></textarea>
->>>>>>> 069beba13055afa6582a8892d3ae10585ac52f8d
   </div>
 </template>
 
@@ -65,7 +62,6 @@ html, body {
   display: block;
 }
 /*Here starts the arrow pointing down animation style*/
-<<<<<<< HEAD
 section {
   position: relative;
   width: 100%;
@@ -116,12 +112,10 @@ section {
     -webkit-transform: rotate(-45deg) translate(-20px, 20px);
     opacity: 0;
   }
-=======
 
 .wrapper {
 	width: 0%;
 	height: 20%;
->>>>>>> 069beba13055afa6582a8892d3ae10585ac52f8d
 }
 
 .arrow {
@@ -191,12 +185,9 @@ border: solid 1.5px #707070;
 font-family: 'Charm', cursive;
 font-size: 20px;
 width: 35%;
-<<<<<<< HEAD
 margin-top: 150px;
-=======
 display: inline-block;
 margin-top: 300px !important;
->>>>>>> 069beba13055afa6582a8892d3ae10585ac52f8d
 }
 textarea::-webkit-input-placeholder {
 font-family: 'Charm', cursive;
