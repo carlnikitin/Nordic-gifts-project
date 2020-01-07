@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <link href="https://fonts.googleapis.com/css?family=Charm&display=swap" rel="stylesheet">
-    <img style="margin-top: 25px; width: 250px" alt="Vue logo" src="./assets/logo.png" />
+    <img style="margin-top: 25px; width: 150px" alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Vali sobivad elemendid, et luua meelepärane suveniir" />
      <img style="margin-top: 45px; width: 320px" alt="Nordic gifts logo" src="./assets/elf.png" />
     <section id="section05" class="demo">
@@ -50,7 +50,7 @@ section {
 .demo a {
   position: absolute;
   left: 50%;
-  top: 50px;
+  top: 150px;
   z-index: 2;
   display: inline-block;
   -webkit-transform: translate(0, -50%);
@@ -112,6 +112,7 @@ border: solid 1.5px #707070;
 font-family: 'Charm', cursive;
 font-size: 20px;
 width: 35%;
+margin-top: 150px;
 }
 textarea::-webkit-input-placeholder {
 font-family: 'Charm', cursive;
