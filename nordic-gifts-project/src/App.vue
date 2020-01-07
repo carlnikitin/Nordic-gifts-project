@@ -38,7 +38,7 @@ export default {
 
 html, body {
   height: 100%;
-  position:relative;
+  
 }
 /*General style*/
 #app {
