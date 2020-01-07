@@ -1,16 +1,13 @@
 <template>
   <div id="app">
     <link href="https://fonts.googleapis.com/css?family=Charm&display=swap" rel="stylesheet">
-    <img style="width: 200px" alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Vali sobivad elemendid, et luua meelepärane suveniir" />
-    <br>
-    <textarea rows="7" cols="55" v-model="message" placeholder="add multiple lines"></textarea>
     <img style="margin-top: 25px; width: 250px" alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Vali sobivad elemendid, et luua meelepärane suveniir" />
      <img style="margin-top: 45px; width: 320px" alt="Vue logo" src="./assets/elf.png" />
     <section id="section05" class="demo">
       <a href="#"><span></span>.......</a>
     </section>
+    <textarea rows="7" cols="55" v-model="message" placeholder="add multiple lines"></textarea>
   </div>
 </template>
 
@@ -38,7 +35,7 @@ export default {
   color: #707070;
   font-weight: 100;
   font-size: 13px;
-  height: 100vh;
+  height: 100%;
   background-image: url(./assets/background.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -48,6 +45,7 @@ export default {
 section {
   position: relative;
   width: 100%;
+  margin-bottom: 150px;
 }
 
 .demo a {
@@ -107,6 +105,7 @@ section {
   100% {
     transform: rotate(-45deg) translate(-20px, 20px);
     opacity: 0;
+    /*Here ends the arrow animation style*/
   }
 }
 textarea {
@@ -133,6 +132,5 @@ textarea:-ms-input-placeholder {
 font-family: 'Charm', cursive;  
 font-size: 20px;
 }
-/*Here ends the arrow animation style*/
 
 </style>
