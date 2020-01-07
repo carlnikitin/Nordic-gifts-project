@@ -3,11 +3,11 @@
     <link href="https://fonts.googleapis.com/css?family=Charm&display=swap" rel="stylesheet">
     <img style="margin-top: 25px; width: 250px" alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Vali sobivad elemendid, et luua meelepärane suveniir" />
-     <img style="margin-top: 45px; width: 320px" alt="Vue logo" src="./assets/elf.png" />
+     <img style="margin-top: 45px; width: 320px" alt="Nordic gifts logo" src="./assets/elf.png" />
     <section id="section05" class="demo">
       <a href="#"><span></span>.......</a>
     </section>
-    <textarea rows="7" cols="55" v-model="message" placeholder="add multiple lines"></textarea>
+    <textarea rows="7" v-model="message" placeholder="add multiple lines"></textarea>
   </div>
 </template>
 
@@ -24,8 +24,8 @@ export default {
 
 <style>
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0px !important;
+  margin: 0px !important;
 }
 /*General style*/
 #app {
@@ -35,7 +35,7 @@ export default {
   color: #707070;
   font-weight: 100;
   font-size: 13px;
-  height: 100%;
+  height: 100vh;
   background-image: url(./assets/background.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -45,7 +45,6 @@ export default {
 section {
   position: relative;
   width: 100%;
-  margin-bottom: 150px;
 }
 
 .demo a {
@@ -112,6 +111,7 @@ textarea {
 border: solid 1.5px #707070;
 font-family: 'Charm', cursive;
 font-size: 20px;
+width: 35%;
 }
 textarea::-webkit-input-placeholder {
 font-family: 'Charm', cursive;
@@ -131,6 +131,14 @@ font-size: 20px;
 textarea:-ms-input-placeholder {
 font-family: 'Charm', cursive;  
 font-size: 20px;
+}
+
+/*Mobile view*/
+/*Textarea*/
+@media only screen and (max-width: 1100px) {
+  textarea {
+    width: 95%;
+  }
 }
 
 </style>
