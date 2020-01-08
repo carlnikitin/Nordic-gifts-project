@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <link href="https://fonts.googleapis.com/css?family=Charm&display=swap" rel="stylesheet">
-    <img style="margin-top: 25px !important; width: 250px" alt="Vue logo" src="./assets/logo.png" />
+    <img style="margin-top: 25px !important; width: 300px" alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld style="margin-top:20px !important" msg="Vali sobivad elemendid, et luua meelepärane suveniir" />
-    <img style="margin-top: 45px !important; width: 320px" alt="Nordic gifts logo" src="./assets/elf.png" />
+    <img style="margin-top: 45px !important; width: 380px" alt="Nordic gifts logo" src="./assets/elf.png" />
     <br>
     <VueNextLevelScroll target="#text">
     <div class="wrapper">
@@ -17,9 +17,7 @@
       </button>
     </div>
     </VueNextLevelScroll>
-    <textarea id="text" rows="7" v-model="message" placeholder="Soovid midagi lisada oma suveniirile? Anna meile teada"></textarea>
-    <br>
-<input v-model="message" placeholder="edit me">
+    <textarea id="text" rows="7" v-model="message" placeholder="Add multiple lines" maxlength="350"></textarea>
   </div>
   
 </template>
@@ -56,7 +54,7 @@ html, body {
   text-align: center;
   color: #707070;
   font-weight: 100;
-  font-size: 13px;
+  font-size: 14px;
   background-image: url(./assets/background.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -84,6 +82,7 @@ html, body {
 	opacity: 0.5;
 	transition: ease 1s;
 	animation: bouncey 1.6s linear infinite;
+  padding: 20px;
 }
 
 .arrow ul {
@@ -139,7 +138,16 @@ font-size: 20px;
 width: 35%;
 display: inline-block;
 margin-top: calc(100vh - 450px) !important;
+overflow: auto;
+outline: none;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none;
+padding: 10px !important;
+
+resize: none; /*remove the resize handle on the bottom right*/
 }
+
 textarea::-webkit-input-placeholder {
 font-family: 'Charm', cursive;
 font-size: 20px;
