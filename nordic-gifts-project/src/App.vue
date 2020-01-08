@@ -1,8 +1,11 @@
 <template>
   <div id="app">
+    <!--Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Charm&display=swap" rel="stylesheet">
+    <!--Nordic Gifts logo-->
     <img style="margin-top: 25px !important; width: 300px" alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld style="margin-top:20px !important" msg="Vali sobivad elemendid, et luua meelepärane suveniir" />
+    <!--Customizable elf-->
     <img style="margin-top: 45px !important; width: 380px" alt="Nordic gifts logo" src="./assets/elf.png" />
     <br>
     <!--Scroll-->
@@ -44,7 +47,10 @@
   </div>
 
   <!--Textarea-->
-  <textarea id="text" rows="7" v-model="message" placeholder="Add multiple lines" maxlength="350"></textarea>
+    <textarea id="text" rows="7" v-model="message" placeholder="Add multiple lines" maxlength="350"></textarea>
+
+  <!--Send button-->
+  <button type="button" class="send-button">SAADA TELLIMUS</button>
   </div>  
 </template>
 
@@ -202,6 +208,17 @@ font-size: 20px;
 }
 .form-input {
   margin-top: calc(100vh - 500px) !important;
+}
+/*Send button*/
+.send-button {
+  margin:20px auto 0px auto !important;
+  display:block !important;
+  background-color: #FF9F7F;
+  color: #fff;
+  border-radius: 10px;
+  border: 0px;
+  padding: 15px 30px !important;
+  font-size: 18px;
 }
 
 /*Mobile view*/
