@@ -21,7 +21,7 @@
   
     <!--Form-->
     <div class="row justify-content-md-center form-input">
-    <form class="col col-sm-2">
+    <form class="col col-sm-4">
       <div class="row">
         <div class="input-field col s12">
           <input id="name" type="text" class="validate">
