@@ -17,8 +17,11 @@
       </button>
     </div>
     </VueNextLevelScroll>
-    <textarea id="text" rows="7" v-model="message" placeholder="Add multiple lines"></textarea>
+    <textarea id="text" rows="7" v-model="message" placeholder="Soovid midagi lisada oma suveniirile? Anna meile teada"></textarea>
+    <br>
+<input v-model="message" placeholder="edit me">
   </div>
+  
 </template>
 
 <script>
