@@ -18,6 +18,12 @@
     </div>
     </VueNextLevelScroll>
     <textarea id="text" rows="7" v-model="message" placeholder="Add multiple lines" maxlength="350"></textarea>
+    <div class="form">
+      <input type="text" placeholder="Sisestage siia oma ees -ja perekonnanimi" id="name" class="formField"><br>
+      <input type="text" placeholder="Sisestage siia oma emaili aadress" id="email" class="formField"><br>
+      <input type="text" placeholder="Sisestage siia oma tel nr." id="tel" class="formField"><br>
+      <input type="submit" value="Saada" class="formField">
+    </div>
   </div>
   
 </template>
@@ -166,6 +172,15 @@ font-size: 20px;
 textarea:-ms-input-placeholder {
 font-family: 'Charm', cursive;  
 font-size: 20px;
+}
+
+.formField{
+  border: solid 1.5px #707070;
+  font-family: 'Charm', cursive;
+  font-size: 20px;
+  width: 35%;
+  height: 70px;
+  margin-top: 5px !important; 
 }
 
 /*Mobile view*/
