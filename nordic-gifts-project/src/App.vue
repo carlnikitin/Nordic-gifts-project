@@ -5,6 +5,7 @@
     <HelloWorld style="margin-top:20px !important" msg="Vali sobivad elemendid, et luua meelepärane suveniir" />
     <img style="margin-top: 45px !important; width: 380px" alt="Nordic gifts logo" src="./assets/elf.png" />
     <br>
+    <!--Scroll-->
     <VueNextLevelScroll target="#text">
     <div class="wrapper">
       <button type=button>
@@ -17,20 +18,41 @@
       </button>
     </div>
     </VueNextLevelScroll>
-    <textarea id="text" rows="7" v-model="message" placeholder="Add multiple lines" maxlength="350"></textarea>
-    <div class="form">
-      <input type="text" placeholder="Sisestage siia oma ees -ja perekonnanimi" id="name" class="formField"><br>
-      <input type="text" placeholder="Sisestage siia oma emaili aadress" id="email" class="formField"><br>
-      <input type="text" placeholder="Sisestage siia oma tel nr." id="tel" class="formField"><br>
-      <input type="submit" value="Saada" class="formField">
-    </div>
-  </div>
   
+    <!--Form-->
+    <div class="row justify-content-md-center form-input">
+    <form class="col col-sm-2">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="name" type="text" class="validate">
+          <label for="name">Nimi</label>
+        </div>
+      </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email">E-mail</label>
+          </div>
+        </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="tel" type="tel" class="validate">
+          <label for="tel">Telefoni number</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!--Textarea-->
+  <textarea id="text" rows="7" v-model="message" placeholder="Add multiple lines" maxlength="350"></textarea>
+  </div>  
 </template>
 
+<!--Javascript-->
 <script>
 import VueNextLevelScroll from "vue-next-level-scroll/"
 import HelloWorld from "./components/HelloWorld.vue";
+
 
 export default {
   name: "app",
@@ -60,7 +82,7 @@ html, body {
   text-align: center;
   color: #707070;
   font-weight: 100;
-  font-size: 14px;
+  font-size: 14px !important;
   background-image: url(./assets/background.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -68,7 +90,6 @@ html, body {
   display: block;
 }
 /*Here starts the arrow pointing down animation style*/
-
 .wrapper {
   width: 0%;
   height: 20%;
@@ -141,17 +162,18 @@ textarea {
 border: solid 1.5px #707070;
 font-family: 'Charm', cursive;
 font-size: 20px;
-width: 35%;
+width: 35% !important;
 display: inline-block;
-margin-top: calc(100vh - 450px) !important;
-overflow: auto;
-outline: none;
+overflow: auto !important;
+outline: none !important;
 -webkit-box-shadow: none;
 -moz-box-shadow: none;
 box-shadow: none;
 padding: 10px !important;
+height: 140px !important;
+margin-top: 50px !important;
 
-resize: none; /*remove the resize handle on the bottom right*/
+resize: none !important; /*remove the resize handle on the bottom right*/
 }
 
 textarea::-webkit-input-placeholder {
@@ -174,20 +196,19 @@ font-family: 'Charm', cursive;
 font-size: 20px;
 }
 
-.formField{
-  border: solid 1.5px #707070;
-  font-family: 'Charm', cursive;
-  font-size: 20px;
-  width: 35%;
-  height: 70px;
-  margin-top: 5px !important; 
+/*Form*/
+.row {
+  margin: 20px 0px 5px 0px !important;
+}
+.form-input {
+  margin-top: calc(100vh - 500px) !important;
 }
 
 /*Mobile view*/
 /*Textarea*/
 @media only screen and (max-width: 1100px) {
   textarea {
-    width: 95%;
+    width: 95% !important;
   }
   .arrow {
     bottom: 20px;
