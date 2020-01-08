@@ -44,7 +44,13 @@
   </div>
 
   <!--Textarea-->
-  <textarea id="text" rows="7" v-model="message" placeholder="Add multiple lines" maxlength="350"></textarea>
+  <textarea id="text" rows="7" v-model="message" placeholder="Soovid midagi lisada oma suveniirile? Anna meile teada" maxlength="350"></textarea>
+
+<footer>
+  <div id="footer-content">
+    <h5>info@nordicgifts.ee, +372 5184 123</h5>
+  </div>
+</footer>
   </div>  
 </template>
 
@@ -88,6 +94,25 @@ html, body {
   background-position: center;
   background-size: cover;
   display: block;
+}
+/*Footer*/
+footer {
+  background: #443838;
+  height: 100px;
+  position:relative;
+  padding-top: 30px !important;
+}
+footer:before {
+ content:"";
+ position:absolute;
+ top: -60px;
+ height:60px;
+ left:0;
+ right:0;
+ background:linear-gradient(to bottom left, transparent 49%, #443838 50%);
+}
+h5 {
+color: white;
 }
 /*Here starts the arrow pointing down animation style*/
 .wrapper {
@@ -172,6 +197,7 @@ box-shadow: none;
 padding: 10px !important;
 height: 140px !important;
 margin-top: 50px !important;
+margin-bottom: 150px !important;
 
 resize: none !important; /*remove the resize handle on the bottom right*/
 }
