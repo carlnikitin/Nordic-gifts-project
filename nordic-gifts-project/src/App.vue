@@ -2,6 +2,7 @@
   <div id="app">
     <!--Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Charm&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
     <!--Nordic Gifts logo-->
     <img style="margin-top: 25px !important; width: 300px" alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld style="margin-top:20px !important" msg="Vali sobivad elemendid, et luua meelepärane suveniir" />
@@ -90,7 +91,7 @@ html, body {
 }
 /*General style*/
 #app {
-  font-family: 'Charm', cursive;
+  font-family: 'Catamaran', sans-serif;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #707070;
@@ -107,8 +108,8 @@ footer {
   background: #443838;
   height: 120px;
   position:relative;
-  padding-top: 30px !important;
-  margin-top: 180px !important;
+  padding-top: 5px !important;
+  margin-top: 210px !important;
 }
 footer:before {
  content:"";
@@ -193,8 +194,7 @@ color: white;
 /*Textarea style*/
 textarea {
 border: solid 1.5px #707070;
-font-family: 'Charm', cursive;
-font-size: 20px;
+font-family: 'Catamaran', sans-serif !important;
 width: 35% !important;
 display: inline-block;
 overflow: auto !important;
@@ -203,30 +203,34 @@ outline: none !important;
 -moz-box-shadow: none;
 box-shadow: none;
 padding: 10px !important;
-height: 140px !important;
+height: 190px !important;
 margin-top: 50px !important;
 margin-bottom: 80px !important;
 
 resize: none !important; /*remove the resize handle on the bottom right*/
 }
 
+#text{
+  font-size: 20px;
+}
+
 textarea::-webkit-input-placeholder {
-font-family: 'Charm', cursive;
+font-family: 'Catamaran', sans-serif;
 font-size: 20px;
 }
 
 textarea:-moz-placeholder { /* Firefox 18- */
-font-family: 'Charm', cursive; 
+font-family: 'Catamaran', sans-serif; 
 font-size: 20px;
 }
 
 textarea::-moz-placeholder {  /* Firefox 19+ */
-font-family: 'Charm', cursive;  
+font-family: 'Catamaran', sans-serif;  
 font-size: 20px;
 }
 
 textarea:-ms-input-placeholder {
-font-family: 'Charm', cursive;  
+font-family: 'Catamaran', sans-serif;  
 font-size: 20px;
 }
 
@@ -278,6 +282,7 @@ font-size: 20px;
 input {
   box-shadow: 0 0.1px 0 0 #333 !important;
   border-bottom: 0.1px solid #333 !important;
+  font-family: 'Catamaran', sans-serif !important;
 }
 
 /*Label*/
