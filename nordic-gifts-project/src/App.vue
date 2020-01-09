@@ -275,7 +275,7 @@ input.invalid[type=email]:not(.browser-default), input.invalid[type=text]:not(.b
 
 /*Mobile view*/
 /*Textarea*/
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 900px) {
   textarea {
     width: 95% !important;
   }
