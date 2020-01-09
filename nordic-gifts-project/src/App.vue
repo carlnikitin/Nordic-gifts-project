@@ -9,7 +9,7 @@
     <img style="margin-top: 45px !important; width: 380px" alt="Nordic gifts logo" src="./assets/elf.png" />
     <br>
     <!--Scroll-->
-    <VueNextLevelScroll target="#text">
+    <VueNextLevelScroll target=".form-input">
     <div class="wrapper">
       <button type=button>
       <div class="arrow">
@@ -46,15 +46,17 @@
     </form>
   </div>
 
-  <!--Textarea-->
-  <textarea id="text" rows="7" v-model="message" placeholder="Soovid midagi lisada oma suveniirile? Anna meile teada" maxlength="350"></textarea>
-  
-    <!--Send button-->
-  <button type="button" class="send-button">SAADA TELLIMUS</button>
+<!--Textarea-->
+<textarea id="text" rows="7" v-model="message" placeholder="Soovid midagi lisada oma suveniirile? Anna meile teada" maxlength="350"></textarea>
 
+  <!--Send button-->
+<button type="button" class="send-button">SAADA TELLIMUS</button>
+
+<!--Footer-->
 <footer>
   <div id="footer-content">
-    <h5>info@nordicgifts.ee, +372 5184 123</h5>
+    <h5>info@nordicgifts.ee</h5>
+    <h5>+372 5184 123</h5>
   </div>
 </footer>
   </div>  
@@ -104,7 +106,7 @@ html, body {
 /*Footer*/
 footer {
   background: #443838;
-  height: 100px;
+  height: 120px;
   position:relative;
   padding-top: 30px !important;
   margin-top: 180px !important;
@@ -246,6 +248,22 @@ font-size: 20px;
   border: 0px;
   padding: 15px 30px !important;
   font-size: 18px;
+}
+
+/*Input style*/
+input {
+  box-shadow: 0 0.1px 0 0 #333 !important;
+  border-bottom: 0.1px solid #333 !important;
+}
+
+/*Label*/
+label {
+  color: #333 !important;
+  font-size: 16px !important;
+}
+
+#footer-content h5 {
+  margin: 10px !important;
 }
 
 /*Mobile view*/
