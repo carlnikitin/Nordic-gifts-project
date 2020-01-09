@@ -48,7 +48,7 @@
   </div>
 
 <!--Textarea-->
-<textarea id="text" rows="7" v-model="message" placeholder="Soovid midagi lisada oma suveniirile? Anna meile teada" maxlength="350"></textarea>
+<textarea id="text" rows="7" v-model="message" placeholder="Soovid midagi lisada oma suveniirile? Anna meile teada" maxlength="428"></textarea>
 
   <!--Send button-->
 <button type="button" class="send-button"><span>SAADA TELLIMUS</span></button>
