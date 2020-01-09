@@ -50,7 +50,7 @@
 <textarea id="text" rows="7" v-model="message" placeholder="Soovid midagi lisada oma suveniirile? Anna meile teada" maxlength="350"></textarea>
 
   <!--Send button-->
-<button type="button" class="send-button">SAADA TELLIMUS</button>
+<button type="button" class="send-button"><span>SAADA TELLIMUS</span></button>
 
 <!--Footer-->
 <footer>
@@ -247,6 +247,31 @@ font-size: 20px;
   border: 0px;
   padding: 15px 30px !important;
   font-size: 18px;
+  transition: all 0.5s;
+}
+
+.send-button span {
+  position: relative !important;
+  transition: 0.5s;
+  display: inline-block !important;
+}
+
+.send-button span:after {
+  content: '\00bb';
+  position: absolute !important;
+  opacity: 0;
+  top: 0;
+  right: -20px !important;
+  transition: 0.5s;
+}
+
+.send-button:hover span {
+  padding-right: 25px !important;
+}
+
+.send-button:hover span:after {
+  opacity: 1;
+  right: 0 !important;
 }
 
 /*Input style*/
