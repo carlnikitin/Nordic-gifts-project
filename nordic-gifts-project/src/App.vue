@@ -67,7 +67,6 @@
 import VueNextLevelScroll from "vue-next-level-scroll/"
 import HelloWorld from "./components/HelloWorld.vue";
 
-
 export default {
   name: "app",
   components: {
