@@ -10,7 +10,7 @@
     <img style="margin-top: 45px !important; width: 380px" alt="Nordic gifts logo" src="./assets/elf.png" />
     <br>
     <!--Scroll-->
-    <VueNextLevelScroll target=".wrapper">
+    <VueNextLevelScroll target=".arrow">
     <div class="wrapper">
       <button type=button>
       <div class="arrow">
