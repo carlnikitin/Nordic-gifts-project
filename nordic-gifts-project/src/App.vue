@@ -27,19 +27,19 @@
     <form class="col col-sm-4">
       <div class="row">
         <div class="input-field col s12">
-          <input id="name" type="text" class="validate">
+          <input id="name" type="text" class="validate" required="required">
           <label for="name">Nimi</label>
         </div>
       </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="email" type="email" class="validate">
+            <input id="email" type="email" class="validate" required="required">
             <label for="email">E-mail</label>
           </div>
         </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="tel" type="tel" class="validate">
+          <input id="tel" type="tel" class="validate" required="required">
           <label for="tel">Telefoni number</label>
         </div>
       </div>
@@ -262,8 +262,15 @@ label {
   font-size: 16px !important;
 }
 
+/*Footer content eg email and phone*/
 #footer-content h5 {
   margin: 10px !important;
+}
+
+/*Incorrect input then red*/
+input.invalid[type=email]:not(.browser-default), input.invalid[type=text]:not(.browser-default), input.invalid[type=tel]:not(.browser-default) {
+  border-bottom: 0.1px solid red !important;
+  box-shadow: 0 0.1px 0 0 red !important;
 }
 
 /*Mobile view*/
