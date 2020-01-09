@@ -30,6 +30,7 @@ a {
   color: #42b983;
 }
 h1 {
+  font-family: 'Charm', cursive;
   font-size: 34px;
 }
 </style>
