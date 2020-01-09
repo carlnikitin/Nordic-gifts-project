@@ -241,7 +241,7 @@ font-size: 20px;
 .send-button {
   margin:20px auto 0px auto !important;
   display:block !important;
-  background-color: #FF9F7F;
+  background-color: #FF9F7F !important;
   color: #fff;
   border-radius: 10px;
   border: 0px;
@@ -270,6 +270,26 @@ label {
 input.invalid[type=email]:not(.browser-default), input.invalid[type=text]:not(.browser-default), input.invalid[type=tel]:not(.browser-default) {
   border-bottom: 0.1px solid red !important;
   box-shadow: 0 0.1px 0 0 red !important;
+}
+
+/* unvisited link */
+.send-button:link {
+  background-color: #FF9F7F !important;
+}
+
+/* visited link */
+.send-button:visited{
+  background-color: #FF9F7F !important;
+}
+
+/* mouse over link */
+.send-button:hover{
+  background-color: #F59170 !important;
+}
+
+/* selected link */
+.send-button:active {
+  background-color: #F59170 !important;
 }
 
 /*Mobile view*/
