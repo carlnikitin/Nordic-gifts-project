@@ -12,14 +12,12 @@
     <!--Scroll-->
     <VueNextLevelScroll target=".arrow">
     <div class="wrapper">
-      <button type=button>
       <div class="arrow">
       <ul>
         <li></li>
         <li></li>
       </ul>
       </div>
-      </button>
     </div>
     </VueNextLevelScroll>
   
