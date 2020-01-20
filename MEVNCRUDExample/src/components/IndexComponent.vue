@@ -18,8 +18,8 @@
                   <td>{{ post.email }}</td>
                   <td>{{ post.number }}</td>
                   <td>{{ post.body }}</td>
-                  <td><router-link :to="{name: 'edit', params: { id: post._id }}" class="btn btn-primary">Edit</router-link></td>
-                  <td><button class="btn btn-danger" @click.prevent="deletePost(post._id)">Delete</button></td>
+                  <td><router-link :to="{name: 'edit', params: { id: post._id }}" class="edit-button btn btn-primary">Edit</router-link></td>
+                  <td><button class="delete-button btn btn-danger" @click.prevent="deletePost(post._id)">Delete</button></td>
                 </tr>
             </tbody>
         </table>
@@ -50,3 +50,13 @@
     }
   }
 </script>
+
+<style>
+.delete-button {
+  background-color: #E64B4B ;
+}
+
+.edit-button {
+  background-color: #4B94E6;
+}
+</style>
