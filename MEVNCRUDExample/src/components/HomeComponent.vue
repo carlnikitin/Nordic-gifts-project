@@ -22,8 +22,8 @@
 
 
     <!--Form-->
-    <form @submit.prevent="addPost">
-      <div class="row name">
+    <form  @submit.prevent="addPost">
+      <div class="row name justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
             <label>Post Title:</label>
@@ -31,11 +31,11 @@
           </div>
         </div>
         </div>
-        <div class="row">
+        <div class="justify-content-center row">
           <div class="col-sm-12 col-lg-6">
             <div class="form-group">
               <label>Post Body:</label>
-              <textarea class="form-control" v-model="post.body" rows="5"></textarea>
+              <textarea class="form-control" v-model="post.body" rows="10"></textarea>
             </div>
           </div>
         </div><br />
