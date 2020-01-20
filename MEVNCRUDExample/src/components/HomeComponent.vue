@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div id="app">
     <!--Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Charm&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
@@ -9,7 +9,7 @@
     <img class="logo" :src="elf">
 
     <!--Scroll-->
-    <VueNextLevelScroll target=".name">
+    <VueNextLevelScroll target=".arrow">
     <div class="wrapper">
       <div class="arrow">
       <ul>
@@ -58,6 +58,10 @@
 import VueNextLevelScroll from "vue-next-level-scroll/";
 
 export default {
+  name: "app",
+      components: {
+      VueNextLevelScroll
+      },
     data () {
         return {
             logo: require('@/assets/logo.png'),
