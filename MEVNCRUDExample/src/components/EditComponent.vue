@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label>Post Name: </label>
+            <label>Nimi </label>
             <input type="text" class="form-control" v-model="post.name">
           </div>
         </div>
@@ -13,11 +13,19 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label>Post Body: </label>
-              <textarea class="form-control" v-model="post.body" rows="5"></textarea>
+              <label>E-mail </label>
+              <input class="form-control" v-model="post.email">
             </div>
           </div>
-        </div><br />
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Telefon </label>
+              <input class="form-control" v-model="post.number">
+            </div>
+          </div>
+        </div>
         <div class="form-group">
           <button class="btn btn-primary">Update</button>
         </div>
