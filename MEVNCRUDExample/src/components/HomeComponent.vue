@@ -10,34 +10,27 @@
 
 
     <!--Form-->
-    <div class="row justify-content-md-center form-input">
     <form @submit.prevent="addPost">
       <div class="row">
-        <div class="input-field col s12">
-          <input id="name" type="text" class="validate" required="required">
-          <label for="name">Nimi</label>
-        </div>
-      </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="email" type="email" class="validate" required="required">
-            <label for="email">E-mail</label>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Post Title:</label>
+            <input type="text" class="form-control" v-model="post.title">
           </div>
         </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="tel" type="tel" class="validate" required="required">
-          <label for="tel">Telefoni number</label>
         </div>
-      </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Post Body:</label>
+              <textarea class="form-control" v-model="post.body" rows="5"></textarea>
+            </div>
+          </div>
+        </div><br />
+        <div class="form-group">
+          <button class="btn btn-primary">Create</button>
+        </div>
     </form>
-  </div>
-
-<!--Textarea-->
-<textarea id="text" rows="7" v-model="message" placeholder="Soovid midagi lisada oma suveniirile? Anna meile teada" maxlength="400" ></textarea>
-
-  <!--Send button-->
-<button type="button" class="send-button"><span>SAADA TELLIMUS</span></button>
 
 <!--Footer-->
 <footer>
