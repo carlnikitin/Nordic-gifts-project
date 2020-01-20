@@ -103,17 +103,17 @@ body {
 /*Textarea style*/
 textarea {
 border: solid 1.5px #707070;
-font-family: 'Catamaran', sans-serif !important;
+font-family: 'Catamaran', sans-serif;
 display: inline-block;
-overflow: auto !important;
-outline: none !important;
+overflow: auto;
+outline: none;
 -webkit-box-shadow: none;
 -moz-box-shadow: none;
 box-shadow: none;
-padding: 10px !important;
-height: 190px !important;
-margin-top: 50px !important;
-margin-bottom: 80px !important;
+padding: 10px;
+height: 190px;
+margin-top: 50px;
+margin-bottom: 80px;
 
 resize: none !important; /*remove the resize handle on the bottom right*/
 }
@@ -298,7 +298,7 @@ input.invalid[type=email]:not(.browser-default), input.invalid[type=text]:not(.b
 }
 
 form {
-  margin: auto;
+  margin-top: calc(100vh - 500px);
 }
 
 
