@@ -26,19 +26,35 @@
       <div class="row name justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
-            <label>Post Title:</label>
-            <input type="text" class="form-control" v-model="post.title">
+            <label>Nimi</label>
+            <input type="text" class="form-control" v-model="post.name">
           </div>
         </div>
         </div>
         <div class="justify-content-center row">
           <div class="col-sm-12 col-lg-6">
             <div class="form-group">
-              <label>Post Body:</label>
-              <textarea class="form-control" v-model="post.body" rows="5"></textarea>
+              <label>E-mail</label>
+              <input type="text" class="form-control" v-model="post.email">
             </div>
           </div>
-        </div><br />
+        </div>
+        <div class="row name justify-content-center">
+        <div class="col-sm-12 col-lg-6">
+          <div class="form-group">
+            <label>Telefon</label>
+            <input type="text" class="form-control" v-model="post.number">
+          </div>
+        </div>
+        </div>
+        <div class="row name justify-content-center">
+        <div class="col-sm-12 col-lg-6">
+          <div class="form-group">
+            <label></label>
+            <textarea class="form-control" v-model="post.body" rows="5" placeholder="Soovid midagi lisada oma suveniirile? Anna meile teada"></textarea>
+          </div>
+        </div>
+        </div>
         <div class="form-group">
         <button  class="send-button"><span>SAADA TELLIMUS</span></button>
 
@@ -52,6 +68,7 @@
     <h5>+372 5184 123</h5>
   </div>
 </footer>
+
   </div>
 </template>
 <script>
@@ -90,6 +107,7 @@ body {
     background-size: cover;
     background-size: auto;
 }
+
 
 .logo {
     width: 350px;
@@ -303,6 +321,29 @@ input.invalid[type=email]:not(.browser-default), input.invalid[type=text]:not(.b
 
 form {
   margin-top: calc(100vh - 500px);
+}
+
+/*Footer*/
+footer {
+  background: #443838;
+  height: 120px;
+  position:relative;
+  padding-top: 5px !important;
+  margin-top: 210px !important;
+}
+footer:before {
+ content:"";
+ position:absolute;
+ top: -59px;
+ height:60px;
+ left:0;
+ right:0;
+ background:linear-gradient(to bottom left, transparent 49%, #443838 50%);
+}
+h5 {
+color: white;
+text-align: center;
+font-family: 'Catamaran', sans-serif;
 }
 
 
