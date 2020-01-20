@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1>Posts</h1><br />
+      <h1>Tellijate andmed</h1><br />
 
         <table class="table table-hover">
             <thead>
