@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Edit Post</h1>
+    <h1>Muuda andmeid</h1>
     <form @submit.prevent="updatePost">
       <div class="row">
         <div class="col-md-6">
@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary">Update</button>
+          <button class="btn btn-primary">Muuda</button>
         </div>
     </form>
   </div>

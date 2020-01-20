@@ -18,8 +18,8 @@
                   <td>{{ post.email }}</td>
                   <td>{{ post.number }}</td>
                   <td>{{ post.body }}</td>
-                  <td><router-link :to="{name: 'edit', params: { id: post._id }}" class="btn btn-primary">Edit</router-link></td>
-                  <td><button class="btn btn-danger" @click.prevent="deletePost(post._id)">Delete</button></td>
+                  <td><router-link :to="{name: 'edit', params: { id: post._id }}" class="edit-button btn btn-primary">Edit</router-link></td>
+                  <td><button class="delete-button btn btn-danger" @click.prevent="deletePost(post._id)">Delete</button></td>
                 </tr>
             </tbody>
         </table>
@@ -50,3 +50,53 @@
     }
   }
 </script>
+
+<style>
+.delete-button {
+  background-color: #E64B4B ;
+}
+
+.edit-button {
+  background-color: #4B94E6;
+}
+
+/* unvisited link */
+.delete-button:link {
+  background-color: #E64B4B;
+}
+
+/* visited link */
+.delete-button:visited {
+  background-color: #E64B4B;
+}
+
+/* mouse over link */
+.delete-button:hover {
+  background-color: #E64B4B;
+}
+
+/* selected link */
+.delete-button:active {
+  background-color: #E64B4B;
+}
+
+/* unvisited link */
+.edit-button:link {
+  background-color: #4B94E6;
+}
+
+/* visited link */
+.edit-button:visited {
+  background-color: #4B94E6;
+}
+
+/* mouse over link */
+.edit-button:hover {
+  background-color: #4B94E6;
+}
+
+/* selected link */
+.edit-button:active {
+  background-color: #4B94E6;
+}
+</style>
