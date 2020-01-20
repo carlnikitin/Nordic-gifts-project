@@ -35,7 +35,7 @@
           <div class="col-sm-12 col-lg-6">
             <div class="form-group">
               <label>Post Body:</label>
-              <textarea class="form-control" v-model="post.body" rows="10"></textarea>
+              <textarea class="form-control" v-model="post.body" rows="5"></textarea>
             </div>
           </div>
         </div><br />
@@ -104,7 +104,6 @@ body {
 textarea {
 border: solid 1.5px #707070;
 font-family: 'Catamaran', sans-serif !important;
-width: 35% !important;
 display: inline-block;
 overflow: auto !important;
 outline: none !important;
