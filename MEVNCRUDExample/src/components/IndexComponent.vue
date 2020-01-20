@@ -59,4 +59,44 @@
 .edit-button {
   background-color: #4B94E6;
 }
+
+/* unvisited link */
+.delete-button:link {
+  background-color: #E64B4B;
+}
+
+/* visited link */
+.delete-button:visited {
+  background-color: #E64B4B;
+}
+
+/* mouse over link */
+.delete-button:hover {
+  background-color: #E64B4B;
+}
+
+/* selected link */
+.delete-button:active {
+  background-color: #E64B4B;
+}
+
+/* unvisited link */
+.edit-button:link {
+  background-color: #4B94E6;
+}
+
+/* visited link */
+.edit-button:visited {
+  background-color: #4B94E6;
+}
+
+/* mouse over link */
+.edit-button:hover {
+  background-color: #4B94E6;
+}
+
+/* selected link */
+.edit-button:active {
+  background-color: #4B94E6;
+}
 </style>
