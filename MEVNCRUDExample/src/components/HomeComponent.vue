@@ -22,28 +22,28 @@
 
 
     <!--Form-->
-    <form  @submit.prevent="addPost">
+    <form @submit.prevent="addPost">
       <div class="row name justify-content-center">
         <div class="col-sm-12 col-lg-6">
-          <div class="form-group">
+          <div class="form-group input-field">
             <label>Nimi</label>
-            <input type="text" class="form-control" v-model="post.name">
+            <input required="required" type="text" class="form-control" v-model="post.name">
           </div>
         </div>
         </div>
         <div class="justify-content-center row">
           <div class="col-sm-12 col-lg-6">
-            <div class="form-group">
+            <div class="form-group input-field">
               <label>E-mail</label>
-              <input type="text" class="form-control" v-model="post.email">
+              <input required="required" type="email" class="form-control" v-model="post.email">
             </div>
           </div>
         </div>
         <div class="row name justify-content-center">
         <div class="col-sm-12 col-lg-6">
-          <div class="form-group">
+          <div class="form-group input-field">
             <label>Telefon</label>
-            <input type="text" class="form-control" v-model="post.number">
+            <input required="required" type="tel" class="form-control" v-model="post.number">
           </div>
         </div>
         </div>
@@ -344,6 +344,26 @@ h5 {
 color: white;
 text-align: center;
 font-family: 'Catamaran', sans-serif;
+}
+
+/*Input style*/
+input {
+  box-shadow: 0 0.1px 0 0 #333 !important;
+  border-bottom: 0.1px solid #333 !important;
+  font-family: 'Catamaran', sans-serif !important;
+}
+
+/*Label*/
+label {
+  color: #333 !important;
+  font-size: 16px !important;
+}
+
+
+/*Incorrect input then red*/
+input.invalid[type=email]:not(.browser-default), input.invalid[type=text]:not(.browser-default), input.invalid[type=tel]:not(.browser-default) {
+  border-bottom: 0.1px solid red !important;
+  box-shadow: 0 0.1px 0 0 red !important;
 }
 
 
