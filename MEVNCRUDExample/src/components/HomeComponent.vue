@@ -6,13 +6,25 @@
     
     <img class="logo" :src="logo">
     <h1 class="main_text">Vali sobivad elemendid, et luua meelepärane suveniir</h1>
-     <img class="logo" :src="elf">
+    <img class="logo" :src="elf">
+
+    <!--Scroll-->
+    <VueNextLevelScroll target=".name">
+    <div class="wrapper">
+      <div class="arrow">
+      <ul>
+        <li></li>
+        <li></li>
+      </ul>
+      </div>
+    </div>
+    </VueNextLevelScroll>
 
 
     <!--Form-->
     <form @submit.prevent="addPost">
-      <div class="row">
-        <div class="col-md-6">
+      <div class="row name">
+        <div class="col-sm-12 col-lg-6">
           <div class="form-group">
             <label>Post Title:</label>
             <input type="text" class="form-control" v-model="post.title">
@@ -20,7 +32,7 @@
         </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-sm-12 col-lg-6">
             <div class="form-group">
               <label>Post Body:</label>
               <textarea class="form-control" v-model="post.body" rows="5"></textarea>
@@ -28,7 +40,8 @@
           </div>
         </div><br />
         <div class="form-group">
-          <button class="btn btn-primary">Create</button>
+        <button  class="send-button"><span>SAADA TELLIMUS</span></button>
+
         </div>
     </form>
 
@@ -42,6 +55,8 @@
   </div>
 </template>
 <script>
+import VueNextLevelScroll from "vue-next-level-scroll/";
+
 export default {
     data () {
         return {
@@ -54,7 +69,7 @@ export default {
       addPost(){
         let uri = 'http://localhost:4000/posts/add';
         this.axios.post(uri, this.post).then(() => {
-          this.$router.push({name: 'posts'});
+          
         });
       }
     }
@@ -70,9 +85,8 @@ body {
     background-position: center;
     background-size: cover;
     background-size: auto;
-}.app {
-     
 }
+
 .logo {
     width: 350px;
     margin: auto;
@@ -216,6 +230,78 @@ input.invalid[type=email]:not(.browser-default), input.invalid[type=text]:not(.b
 .send-button:active {
   background-color: #F59170 !important;
 }
+
+/*Here starts the arrow pointing down animation style*/
+.wrapper {
+  width: 0%;
+  height: 20%;
+}
+
+.arrow {
+  width: 38px;
+  height: 14px;
+  margin: auto !important;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  opacity: 0.5;
+  transition: ease 1s;
+  animation: bouncey 1.6s linear infinite;
+  padding: 20px;
+}
+
+.arrow ul {
+  list-style: none;
+}
+
+.arrow ul li {
+  width: 24px;
+  height: 4px;
+  background: #333;
+}
+
+.arrow ul li:nth-child(1) {
+  left: 0;
+  top: 0;
+  position: absolute;
+  transform: rotate(45deg);
+  border-radius: 5px 0 0 5px;
+}
+
+.arrow ul li:nth-child(2) {
+  left: 14px;
+  position: absolute;
+  border-radius: 0 5px 5px 0;
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+@keyframes bouncey {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+form {
+  margin: auto;
+}
+
 
 /*Mobile view*/
 /*Textarea*/
