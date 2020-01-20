@@ -5,8 +5,8 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label>Post Title:</label>
-            <input type="text" class="form-control" v-model="post.title">
+            <label>Post Name:</label>
+            <input type="text" class="form-control" v-model="post.name">
           </div>
         </div>
         </div>

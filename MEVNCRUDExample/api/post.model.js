@@ -3,7 +3,13 @@ const Schema = mongoose.Schema;
 
 // Define collection and schema for Post
 let Post = new Schema({
-  title: {
+  name: {
+    type: String
+  },
+  email: {
+    type: String
+  },
+  number: {
     type: String
   },
   body: {
