@@ -175,7 +175,7 @@ font-size: 20px;
 .send-button {
   margin:20px auto 0px auto;
   display:block;
-  background-color: #FF9F7F;
+  background-color: #FF9F7F !important;
   color: #fff;
   border-radius: 10px;
   border: 0px;
@@ -235,22 +235,22 @@ label {
 
 /* unvisited link */
 .send-button:link {
-  background-color: #FF9F7F;
+  background-color: #FF9F7F !important;
 }
 
 /* visited link */
 .send-button:visited{
-  background-color: #FF9F7F;
+  background-color: #FF9F7F !important;
 }
 
 /* mouse over link */
 .send-button:hover{
-  background-color: #F59170;
+  background-color: #F59170 !important;
 }
 
 /* selected link */
 .send-button:active {
-  background-color: #F59170;
+  background-color: #F59170 !important;
 }
 
 /*Here starts the arrow pointing down animation style*/
