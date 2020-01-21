@@ -137,8 +137,7 @@ padding: 10px;
 height: 190px;
 margin-top: 50px;
 margin-bottom: 80px;
-
-resize: none !important; /*remove the resize handle on the bottom right*/
+resize: none; /*remove the resize handle on the bottom right*/
 }
 
 #text{
@@ -167,64 +166,64 @@ font-size: 20px;
 
 /*Form*/
 .row {
-  margin: 20px 0px 5px 0px !important;
+  margin: 20px 0px 5px 0px;
 }
 .form-input {
-  margin-top: calc(100vh - 500px) !important;
+  margin-top: calc(100vh - 500px);
 }
 /*Send button*/
 .send-button {
-  margin:20px auto 0px auto !important;
-  display:block !important;
-  background-color: #FF9F7F !important;
+  margin:20px auto 0px auto;
+  display:block;
+  background-color: #FF9F7F;
   color: #fff;
   border-radius: 10px;
   border: 0px;
-  padding: 15px 30px !important;
+  padding: 15px 30px;
   font-size: 18px;
   transition: all 0.5s;
 }
 
 .send-button span {
-  position: relative !important;
+  position: relative;
   transition: 0.5s;
-  display: inline-block !important;
+  display: inline-block;
 }
 
 .send-button span:after {
   content: '\00bb';
-  position: absolute !important;
+  position: absolute;
   opacity: 0;
   top: 0;
-  right: -20px !important;
+  right: -20px;
   transition: 0.5s;
 }
 
 .send-button:hover span {
-  padding-right: 25px !important;
+  padding-right: 25px;
 }
 
 .send-button:hover span:after {
   opacity: 1;
-  right: 0 !important;
+  right: 0;
 }
 
 /*Input style*/
 input {
-  box-shadow: 0 0.1px 0 0 #333 !important;
-  border-bottom: 0.1px solid #333 !important;
-  font-family: 'Catamaran', sans-serif !important;
+  box-shadow: 0 0.1px 0 0 #333;
+  border-bottom: 0.1px solid #333;
+  font-family: 'Catamaran', sans-serif;
 }
 
 /*Label*/
 label {
-  color: #333 !important;
-  font-size: 16px !important;
+  color: #333;
+  font-size: 16px;
 }
 
 /*Footer content eg email and phone*/
 #footer-content h5 {
-  margin: 10px !important;
+  margin: 10px;
 }
 
 /*Incorrect input then red*/
@@ -235,22 +234,22 @@ input.invalid[type=email]:not(.browser-default), input.invalid[type=text]:not(.b
 
 /* unvisited link */
 .send-button:link {
-  background-color: #FF9F7F !important;
+  background-color: #FF9F7F;
 }
 
 /* visited link */
 .send-button:visited{
-  background-color: #FF9F7F !important;
+  background-color: #FF9F7F;
 }
 
 /* mouse over link */
 .send-button:hover{
-  background-color: #F59170 !important;
+  background-color: #F59170;
 }
 
 /* selected link */
 .send-button:active {
-  background-color: #F59170 !important;
+  background-color: #F59170;
 }
 
 /*Here starts the arrow pointing down animation style*/
@@ -262,7 +261,7 @@ input.invalid[type=email]:not(.browser-default), input.invalid[type=text]:not(.b
 .arrow {
   width: 38px;
   height: 14px;
-  margin: auto !important;
+  margin: auto;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
@@ -329,8 +328,8 @@ footer {
   background: #443838;
   height: 120px;
   position:relative;
-  padding-top: 5px !important;
-  margin-top: 210px !important;
+  padding-top: 5px;
+  margin-top: 210px;
 }
 footer:before {
  content:"";
@@ -349,22 +348,22 @@ font-family: 'Catamaran', sans-serif;
 
 /*Input style*/
 input {
-  box-shadow: 0 0.1px 0 0 #333 !important;
-  border-bottom: 0.1px solid #333 !important;
-  font-family: 'Catamaran', sans-serif !important;
+  box-shadow: 0 0.1px 0 0 #333;
+  border-bottom: 0.1px solid #333;
+  font-family: 'Catamaran', sans-serif;
 }
 
 /*Label*/
 label {
-  color: #333 !important;
-  font-size: 16px !important;
+  color: #333;
+  font-size: 16px;
 }
 
 
-/*Incorrect input then red*/
-input.invalid[type=email]:not(.browser-default), input.invalid[type=text]:not(.browser-default), input.invalid[type=tel]:not(.browser-default) {
-  border-bottom: 0.1px solid red !important;
-  box-shadow: 0 0.1px 0 0 red !important;
+.container {
+  padding: 0px;
+  max-width: 100%;
+  width: 100%;
 }
 
 
@@ -372,10 +371,11 @@ input.invalid[type=email]:not(.browser-default), input.invalid[type=text]:not(.b
 /*Textarea*/
 @media only screen and (max-width: 900px) {
   textarea {
-    width: 95% !important;
+    width: 95%;
   }
   .arrow {
     bottom: 20px;
   }
 }
 </style>
+
