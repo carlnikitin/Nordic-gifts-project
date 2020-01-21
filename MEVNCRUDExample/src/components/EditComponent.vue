@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Muuda andmeid</h1>
-    <form @submit.prevent="updatePost">
+    <form class="margin" @submit.prevent="updatePost">
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary">Muuda</button>
+          <button class="btn btn-primary button">Muuda</button>
         </div>
     </form>
   </div>
@@ -57,3 +57,15 @@
       }
     }
 </script>
+
+<style>
+.margin {
+  margin-top: 10em;
+}
+.button {
+  background-color: #FF9F7F;
+}
+.button:hover {
+  background-color: #FF9F7F;
+}
+</style>
