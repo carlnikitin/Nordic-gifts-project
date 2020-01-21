@@ -27,7 +27,7 @@
         <div class="col-sm-12 col-lg-6">
           <div class="form-group input-field">
             <label>Nimi</label>
-            <input required="required" type="text" class="form-control" v-model="post.name">
+            <input required="required" type="text" class="validate form-control" v-model="post.name">
           </div>
         </div>
         </div>
@@ -35,7 +35,7 @@
           <div class="col-sm-12 col-lg-6">
             <div class="form-group input-field">
               <label>E-mail</label>
-              <input required="required" type="email" class="form-control" v-model="post.email">
+              <input required="required" type="email" class="validate form-control" v-model="post.email">
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@
         <div class="col-sm-12 col-lg-6">
           <div class="form-group input-field">
             <label>Telefon</label>
-            <input required="required" type="tel" class="form-control" v-model="post.number">
+            <input required="required" type="tel" class="validate form-control" v-model="post.number">
           </div>
         </div>
         </div>
@@ -208,11 +208,17 @@ font-size: 20px;
   right: 0;
 }
 
+/*Incorrect input then red*/
+input.invalid[type=email]:not(.browser-default), input.invalid[type=text]:not(.browser-default), input.invalid[type=tel]:not(.browser-default) {
+  border-bottom: 0.1px solid red !important;
+  box-shadow: 0 0.1px 0 0 red !important;
+}
+
 /*Input style*/
 input {
-  box-shadow: 0 0.1px 0 0 #333;
-  border-bottom: 0.1px solid #333;
-  font-family: 'Catamaran', sans-serif;
+  box-shadow: 0 0.1px 0 0 #333 !important;
+  border-bottom: 0.1px solid #333 !important;
+  font-family: 'Catamaran', sans-serif !important;
 }
 
 /*Label*/
@@ -226,11 +232,6 @@ label {
   margin: 10px;
 }
 
-/*Incorrect input then red*/
-input.invalid[type=email]:not(.browser-default), input.invalid[type=text]:not(.browser-default), input.invalid[type=tel]:not(.browser-default) {
-  border-bottom: 0.1px solid red !important;
-  box-shadow: 0 0.1px 0 0 red !important;
-}
 
 /* unvisited link */
 .send-button:link {
@@ -375,6 +376,10 @@ label {
   }
   .arrow {
     bottom: 20px;
+  }
+
+  input {
+    border: none;
   }
 }
 </style>
