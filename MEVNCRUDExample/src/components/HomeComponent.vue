@@ -43,7 +43,7 @@
         <div class="col-sm-12 col-lg-6">
           <div class="form-group input-field">
             <label>Telefon</label>
-            <input required="required" type="tel" class="validate form-control" v-model="post.number">
+            <input required="required" type="tel" pattern="[0-9]{8}" class="validate form-control" v-model="post.number">
           </div>
         </div>
         </div>
