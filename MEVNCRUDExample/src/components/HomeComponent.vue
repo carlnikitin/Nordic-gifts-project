@@ -56,8 +56,7 @@
         </div>
         </div>
         <div class="form-group">
-        <button  class="send-button"><span>SAADA TELLIMUS</span></button>
-
+        <button class="send-button"><span>SAADA TELLIMUS</span></button>
         </div>
     </form>
 
@@ -91,11 +90,20 @@ export default {
       addPost(){
         let uri = 'http://localhost:4000/posts/add';
         this.axios.post(uri, this.post).then(() => {
-          
+        this.post.name = ''; 
+        this.post.email = ''; 
+        this.post.number = '';
+        this.post.body = '';
+        this.$alert(
+          "Tellimus on edastatud",
+          "Täname",
+          "success"
+          );
         });
-      }
+      },
     }
 }
+
 </script>
 
 <style>
@@ -365,6 +373,11 @@ label {
   padding: 0px;
   max-width: 100%;
   width: 100%;
+}
+
+/*Alert box OK button*/
+.swal2-styled.swal2-confirm {
+  background-color: #FF9F7F;
 }
 
 
