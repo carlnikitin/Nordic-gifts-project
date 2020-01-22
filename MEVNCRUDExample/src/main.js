@@ -37,7 +37,7 @@ const routes = [
   },
   {
       name: 'posts',
-      path: '/posts',
+      path: '/tellijate_andmed',
       component: IndexComponent
   },
   {

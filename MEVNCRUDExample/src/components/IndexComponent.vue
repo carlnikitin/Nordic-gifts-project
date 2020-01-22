@@ -5,11 +5,12 @@
         <table class="table table-hover">
             <thead>
             <tr>
-              <th>Name</th>
-              <th>Email</th>
+              <th>Nimi</th>
+              <th>E-mail</th>
               <th>Number</th>
-              <th>Body</th>
-              <th>Actions</th>
+              <th>Muu info</th>
+              <th>Muuda</th>
+               <th>Kustuta</th>
             </tr>
             </thead>
             <tbody>
@@ -18,8 +19,8 @@
                   <td>{{ post.email }}</td>
                   <td>{{ post.number }}</td>
                   <td>{{ post.body }}</td>
-                  <td><router-link :to="{name: 'edit', params: { id: post._id }}" class="edit-button btn btn-primary">Edit</router-link></td>
-                  <td><button class="delete-button btn btn-danger" @click.prevent="deletePost(post._id)">Delete</button></td>
+                  <td><router-link :to="{name: 'edit', params: { id: post._id }}" class="edit-button btn btn-primary">Muuda</router-link></td>
+                  <td><button class="delete-button btn btn-danger" @click.prevent="deletePost(post._id)">Kustuta</button></td>
                 </tr>
             </tbody>
         </table>
