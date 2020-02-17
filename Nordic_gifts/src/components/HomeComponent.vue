@@ -23,10 +23,10 @@
 
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Eesti keel
+    <img border="0" alt="W3Schools" src="../assets/Estonia.png" width="30" height="20">
       </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="http://localhost:8080/eng">INGLISE KEEL</a>
+          <a class="dropdown-item" href="http://localhost:8081/eng"><img border="0" alt="W3Schools" src="../assets/Great_Britain.png" width="40" height="20"></a>
         </div>
     </div>
 
@@ -408,6 +408,7 @@ label {
   opacity: 0.8;
   transition: all 0.5s;
 }
+
 
 
 
