@@ -396,6 +396,7 @@ label {
   position: fixed;
   z-index: 1;
   bottom: 0;
+  transition: all 0.5s;
 }
 
 .btn, .btn:visited {
@@ -403,6 +404,8 @@ label {
   opacity: 0.6;
   border:none;
   box-shadow: 0;
+  border-radius: 0px;
+  transition: all 0.5s;
 }
 
 
@@ -415,7 +418,9 @@ label {
 .dropdown-menu.show{
   background-color: #333;
   opacity: 0.5;
-  transform: translate3d(-1px, -49px, 0px) !important;
+  transform: translate3d(-1px, -46px, 0px) !important;
+  transition: all 0.5s;
+  border-radius: 0px;
 }
 
 .btn:focus {
