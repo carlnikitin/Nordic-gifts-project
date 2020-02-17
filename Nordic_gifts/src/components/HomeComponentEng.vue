@@ -105,8 +105,8 @@ export default {
         this.post.number = '';
         this.post.body = '';
         this.$alert(
-          "Tellimus on edastatud",
-          "Täname",
+          "Your order has been accepted",
+          "Thank you",
           "success"
           );
         });
