@@ -22,7 +22,7 @@
 
 
     <div class="dropdown">
-      <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <img border="0" alt="Estonian" src="../assets/Estonia.png" width="30" height="20">
       </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -407,7 +407,7 @@ label {
   border-radius: 0px;
   transition: all 0.5s;
 }
-.dropdown-item:hover, .dropdown-item {
+.dropdown-item:hover, .dropdown-item, .dropdown-item:visited {
   background-color: #333;
 }
 
