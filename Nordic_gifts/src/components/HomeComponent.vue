@@ -21,6 +21,15 @@
     </VueNextLevelScroll>
 
 
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Eesti keel
+      </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="http://localhost:8080/eng">INGLISE KEEL</a>
+        </div>
+    </div>
+
     <!--Form-->
     <form @submit.prevent="addPost">
       <div class="row name justify-content-center">
@@ -382,6 +391,25 @@ label {
 .swal2-styled.swal2-confirm {
   background-color: #FF9F7F;
 }
+.dropdown {
+  right: 0;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+}
+
+.btn {
+  background-color: #333;
+  opacity: 0.6;
+}
+
+.btn:hover {
+  background-color: #333;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+
+
 
 
 /*Mobile view*/
