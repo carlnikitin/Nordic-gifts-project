@@ -2,10 +2,15 @@
 
 ### How to use our project:
 
+### Front-end
 #### 1. cd nordic-gifts-project
 #### 2. npm install
 #### 3. npm run serve
 
+### Back-end
+#### 1. cd api
+#### 2. npm install
+#### 3. nodemon server
 
 ## VS18
 
