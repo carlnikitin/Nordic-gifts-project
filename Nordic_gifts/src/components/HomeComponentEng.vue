@@ -22,7 +22,7 @@
 
      <div class="dropdown">
       <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <img alt="English" src="../assets/Great_Britain.png" width="30" height="20" margin-right="50px">
+    <img alt="English" src="../assets/Great_Britain.png" width="30" height="20">
       </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="http://localhost:8081"><img alt="Estonian" src="../assets/Estonia.png" width="30" height="20"></a>

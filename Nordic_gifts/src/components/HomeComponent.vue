@@ -26,7 +26,7 @@
     <img border="0" alt="Estonian" src="../assets/Estonia.png" width="30" height="20">
       </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="http://localhost:8081/eng"><img border="0" alt="English" src="../assets/Great_Britain.png" width="30" height="20"></a>
+          <a class="dropdown-item" href="http://localhost:8081/eng"><img border="0" src="../assets/Great_Britain.png" width="30" height="20"></a>
         </div>
     </div>
 
