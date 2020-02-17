@@ -4,9 +4,6 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'materialize-css/dist/css/materialize.css'
 import 'materialize-css'
-import VueI18n from 'vue-i18n'
-
-Vue.use(VueI18n)
 
 import VueSimpleAlert from "vue-simple-alert";
 
