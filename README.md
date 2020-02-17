@@ -8,9 +8,9 @@
 #### 3. npm run serve
 
 ### Back-end
-### 1. cd api
-### 2. npm install
-### 3. nodemon server
+#### 1. cd api
+#### 2. npm install
+#### 3. nodemon server
 
 
 ## VS18
