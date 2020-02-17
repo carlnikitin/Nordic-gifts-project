@@ -74,6 +74,7 @@
 <script>
 import VueNextLevelScroll from "vue-next-level-scroll/";
 
+
 export default {
   name: "app",
       components: {
@@ -102,7 +103,9 @@ export default {
         });
       },
     }
+    
 }
+
 
 </script>
 
