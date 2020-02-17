@@ -22,11 +22,11 @@
 
 
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <img border="0" alt="W3Schools" src="../assets/Estonia.png" width="30" height="20">
+      <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <img border="0" alt="Estonian" src="../assets/Estonia.png" width="30" height="20">
       </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="http://localhost:8081/eng"><img border="0" alt="W3Schools" src="../assets/Great_Britain.png" width="30" height="20"></a>
+          <a class="dropdown-item" href="http://localhost:8081/eng"><img border="0" alt="English" src="../assets/Great_Britain.png" width="30" height="20"></a>
         </div>
     </div>
 
@@ -407,7 +407,9 @@ label {
   border-radius: 0px;
   transition: all 0.5s;
 }
-
+.dropdown-item:hover, .dropdown-item {
+  background-color: #333;
+}
 
 .btn:hover {
   background-color: #333;
@@ -417,7 +419,7 @@ label {
 
 .dropdown-menu.show{
   background-color: #333;
-  opacity: 0.5;
+  opacity: 0.8;
   transform: translate3d(-1px, -46px, 0px) !important;
   transition: all 0.5s;
   border-radius: 0px;
