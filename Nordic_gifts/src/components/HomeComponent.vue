@@ -398,10 +398,13 @@ label {
   bottom: 0;
 }
 
-.btn {
+.btn, .btn:visited {
   background-color: #333;
   opacity: 0.6;
+  border:none;
+  box-shadow: 0;
 }
+
 
 .btn:hover {
   background-color: #333;
@@ -409,8 +412,13 @@ label {
   transition: all 0.5s;
 }
 
+.dropdown-menu.show{
+  transform: translate3d(0px, -45px, 0px) !important;
+}
 
-
+.btn-secondary:focus {
+  box-shadow: 0 !important;
+}
 
 
 /*Mobile view*/
