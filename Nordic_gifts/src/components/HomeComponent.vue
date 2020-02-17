@@ -26,7 +26,7 @@
     <img border="0" alt="W3Schools" src="../assets/Estonia.png" width="30" height="20">
       </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="http://localhost:8081/eng"><img border="0" alt="W3Schools" src="../assets/Great_Britain.png" width="40" height="20"></a>
+          <a class="dropdown-item" href="http://localhost:8081/eng"><img border="0" alt="W3Schools" src="../assets/Great_Britain.png" width="30" height="20"></a>
         </div>
     </div>
 
@@ -413,11 +413,19 @@ label {
 }
 
 .dropdown-menu.show{
-  transform: translate3d(0px, -45px, 0px) !important;
+  background-color: #333;
+  opacity: 0.5;
+  transform: translate3d(-1px, -49px, 0px) !important;
 }
 
-.btn-secondary:focus {
+.btn:focus {
+    background-color: #333;
+  opacity: 0.8;
   box-shadow: 0 !important;
+}
+
+.show>.btn-secondary.dropdown-toggle:focus, .btn-secondary:focus, .btn:focus {
+  box-shadow: none;
 }
 
 
