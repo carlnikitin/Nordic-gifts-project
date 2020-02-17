@@ -152,7 +152,7 @@ resize: none; /*remove the resize handle on the bottom right*/
 }
 
 #text{
-  font-size: 20px;
+  font-size: 21px;
 }
 
 textarea::-webkit-input-placeholder {
