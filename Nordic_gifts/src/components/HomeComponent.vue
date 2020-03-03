@@ -408,7 +408,7 @@ label {
   border-radius: 0px;
   transition: all 0.5s;
 }
-.dropdown-item:hover, .dropdown-item {
+.dropdown-item:hover, .dropdown-item, .dropdown-item:visited {
   background-color: #333;
 }
 

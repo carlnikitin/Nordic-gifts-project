@@ -60,12 +60,17 @@
 
 <style>
 .margin {
-  margin-top: 10em;
+  margin-top: 5em;
 }
+/*Edit button*/
 .button {
   background-color: #FF9F7F;
+  margin-left: 15px;
 }
 .button:hover {
   background-color: #FF9F7F;
+}
+h1 {
+  margin-left: 15px;
 }
 </style>
