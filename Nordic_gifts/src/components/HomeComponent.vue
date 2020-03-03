@@ -20,9 +20,9 @@
     </div>
     </VueNextLevelScroll>
 
-
+  <!--Language selector-->
     <div class="dropdown">
-      <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <img border="0" alt="Estonian" src="../assets/Estonia.png" width="30" height="20">
       </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -112,7 +112,6 @@ export default {
         });
       },
     }
-    
 }
 
 
@@ -391,6 +390,8 @@ label {
 .swal2-styled.swal2-confirm {
   background-color: #FF9F7F;
 }
+
+/*Language selector*/
 .dropdown {
   right: 0;
   position: fixed;
@@ -433,6 +434,9 @@ label {
 
 .show>.btn-secondary.dropdown-toggle:focus, .btn-secondary:focus, .btn:focus {
   box-shadow: none;
+}
+.est_language {
+  margin-right: 20px !important;
 }
 
 

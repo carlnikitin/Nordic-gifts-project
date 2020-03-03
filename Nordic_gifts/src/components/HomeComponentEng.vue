@@ -20,8 +20,9 @@
     </div>
     </VueNextLevelScroll>
 
+    <!--Language selector-->
      <div class="dropdown">
-      <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <img alt="English" src="../assets/Great_Britain.png" width="30" height="20">
       </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -112,7 +113,6 @@ export default {
         });
       },
     }
-    
 }
 
 
