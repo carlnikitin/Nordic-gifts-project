@@ -5,10 +5,11 @@
     <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
     
     <img class="logo" :src="logo">
+    <!--Main text and tooltip (Balloon.css)-->
     <button data-balloon-length="large" aria-label="Kliki pea/keha/jalgade peale, et valida oma soovidele vastav element. Kui oled elemendid ära valinud, keri alla ja täida enda andmed, et esitada tellimus" data-balloon-pos="right" class="main_text tooltip-big-text">Vali sobivad elemendid, et luua meelepärane suveniir</button>
     <img class="logo" :src="elf">
 
-    <!--Scroll-->
+    <!--Arrow scroll down-->
     <VueNextLevelScroll target=".arrow">
     <div class="wrapper">
       <div class="arrow">
@@ -84,11 +85,6 @@
 import VueNextLevelScroll from "vue-next-level-scroll/";
 import 'balloon-css';
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.tooltipped');
-    var instances = M.Tooltip.init(elems, options);
-  });
-
 
 export default {
   name: "app",
@@ -134,13 +130,14 @@ body {
     background-size: auto;
 }
 
-
+/*Logo*/
 .logo {
     width: 350px;
     margin: auto;
     display: block;
 }
 
+/*Main text and tooltip*/
 .main_text  {
     font-family: 'Charm', cursive;
     color: #707070;
@@ -171,10 +168,12 @@ margin-bottom: 80px;
 resize: none; /*remove the resize handle on the bottom right*/
 }
 
+/*Text*/
 #text{
   font-size: 20px;
 }
 
+/*Textarea*/
 textarea::-webkit-input-placeholder {
 font-family: 'Catamaran', sans-serif;
 font-size: 20px;
