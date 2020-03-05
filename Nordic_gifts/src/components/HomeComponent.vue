@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
     
     <img class="logo" :src="logo">
-    <h1 class="main_text">Vali sobivad elemendid, et luua meelepärane suveniir</h1>
+    <button data-balloon-length="large" aria-label="Kliki pea/keha/jalgade peale, et valida oma soovidele vastav element. Kui oled elemendid ära valinud, keri alla ja täida enda andmed, et esitada tellimus" data-balloon-pos="right" class="main_text">Vali sobivad elemendid, et luua meelepärane suveniir</button>
     <img class="logo" :src="elf">
 
     <!--Scroll-->
@@ -82,6 +82,12 @@
 </template>
 <script>
 import VueNextLevelScroll from "vue-next-level-scroll/";
+import 'balloon-css';
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.tooltipped');
+    var instances = M.Tooltip.init(elems, options);
+  });
 
 
 export default {
@@ -140,6 +146,11 @@ body {
     color: #707070;
     font-size: 34px;
     text-align: center;
+    background-color: transparent;
+    border: none;
+    cursor: default !important;
+    display: block;
+    margin: 30px auto 30px auto;
 }
 
 /*Textarea style*/
