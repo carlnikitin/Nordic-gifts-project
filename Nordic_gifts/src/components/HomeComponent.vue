@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
     
     <img class="logo" :src="logo">
-    <button data-balloon-length="large" aria-label="Kliki pea/keha/jalgade peale, et valida oma soovidele vastav element. Kui oled elemendid ära valinud, keri alla ja täida enda andmed, et esitada tellimus" data-balloon-pos="right" class="main_text">Vali sobivad elemendid, et luua meelepärane suveniir</button>
+    <button data-balloon-length="large" aria-label="Kliki pea/keha/jalgade peale, et valida oma soovidele vastav element. Kui oled elemendid ära valinud, keri alla ja täida enda andmed, et esitada tellimus" data-balloon-pos="right" class="main_text tooltip-big-text">Vali sobivad elemendid, et luua meelepärane suveniir</button>
     <img class="logo" :src="elf">
 
     <!--Scroll-->
@@ -152,6 +152,7 @@ body {
     display: block;
     margin: 30px auto 30px auto;
 }
+
 
 /*Textarea style*/
 textarea {
@@ -449,6 +450,13 @@ label {
 .est_language {
   margin-right: 20px !important;
 }
+
+/*Tooltip*/
+.tooltip-big-text {
+  --balloon-font-size: 15px;
+  --balloon-color: #707070;
+}
+
 
 
 /*Mobile view*/
