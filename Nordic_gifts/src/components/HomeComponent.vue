@@ -146,7 +146,7 @@ body {
     color: #707070;
     font-size: 34px;
     text-align: center;
-    background-color: transparent;
+    background-color: transparent !important;
     border: none;
     cursor: default !important;
     display: block;
