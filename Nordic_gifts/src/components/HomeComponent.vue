@@ -532,6 +532,7 @@ h1 {
   font-family: 'Charm', cursive;
   color: #707070;
   margin: 30px auto 40px auto;
+  margin-left: 0px !important;
 }
 .logo {
   width: 300px !important;
