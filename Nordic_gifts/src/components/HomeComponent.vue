@@ -7,6 +7,7 @@
     <img class="logo" :src="logo">
     <!--Main text and tooltip (Balloon.css)-->
     <button data-balloon-length="large" aria-label="Kliki pea/keha/jalgade peale, et valida oma soovidele vastav element. Kui oled elemendid ära valinud, keri alla ja täida enda andmed, et esitada tellimus" data-balloon-pos="right" class="main_text tooltip-big-text">Vali sobivad elemendid, et luua meelepärane suveniir</button>
+    <h1>Vali sobivad elemendid, et luua meelepärane suveniir</h1>
     <img class="head" :src="head">
     <img class="body" :src="body">
     <img class="feet" :src="feet">
@@ -135,6 +136,11 @@ body {
 }
 
 /*Logo*/
+.logo {
+  width: 350px !important;
+}
+
+/*Souvenir head, body and feet*/
 .body {
     width: 180px !important;
     margin: auto !important;
@@ -472,6 +478,10 @@ label {
   --balloon-color: #707070;
 }
 
+h1 {
+  display: none;
+}
+
 
 
 /*Mobile view*/
@@ -493,10 +503,12 @@ label {
 
   .head {
     width: 200px !important;
+    margin: 0px auto -10px auto;
   }
 
   .body, .feet {
     width: 150px !important;
+    margin: -7px auto 0px auto;
   }
   .app {
     width: 100vw !important;
@@ -509,6 +521,22 @@ label {
   bottom: 0;
   transition: all 0.5s;
 }
+.tooltip-big-text {
+  display: none;
+}
+h1 {
+  display: block;
+  margin: auto;
+  font-size: 35px;
+  text-align: center;
+  font-family: 'Charm', cursive;
+  color: #707070;
+  margin: 30px auto 40px auto;
+}
+.logo {
+  width: 300px !important;
+}
+
 }
 </style>
 
