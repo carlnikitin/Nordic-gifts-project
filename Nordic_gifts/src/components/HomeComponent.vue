@@ -7,7 +7,9 @@
     <img class="logo" :src="logo">
     <!--Main text and tooltip (Balloon.css)-->
     <button data-balloon-length="large" aria-label="Kliki pea/keha/jalgade peale, et valida oma soovidele vastav element. Kui oled elemendid ära valinud, keri alla ja täida enda andmed, et esitada tellimus" data-balloon-pos="right" class="main_text tooltip-big-text">Vali sobivad elemendid, et luua meelepärane suveniir</button>
-    <img class="logo" :src="elf">
+    <img class="head" :src="head">
+    <img class="body" :src="body">
+    <img class="feet" :src="feet">
 
     <!--Arrow scroll down-->
     <VueNextLevelScroll target=".arrow">
@@ -94,7 +96,9 @@ export default {
     data () {
         return {
             logo: require('@/assets/logo.png'),
-            elf: require('@/assets/elf.png'),
+            head: require('@/assets/head.png'),
+            body: require('@/assets/body.png'),
+            feet: require('@/assets/feet.png'),
             post:{}
         }
     },
@@ -131,9 +135,21 @@ body {
 }
 
 /*Logo*/
-.logo {
-    width: 350px;
-    margin: auto;
+.body {
+    width: 180px !important;
+    margin: auto !important;
+    display: block;
+}
+
+.head {
+    width: 270px !important;
+    margin: 0px auto -18px auto;
+    display: block;
+}
+
+.feet {
+    width: 180px !important;
+    margin: -10px auto 0px auto;
     display: block;
 }
 
@@ -465,12 +481,34 @@ label {
     width: 95%;
   }
   .arrow {
-    bottom: 20px;
+    bottom: 0px !important;
+  }
+  .main_text {
+    font-size: 20px;
   }
 
   input {
     border: none;
   }
+
+  .head {
+    width: 200px !important;
+  }
+
+  .body, .feet {
+    width: 150px !important;
+  }
+  .app {
+    width: 100vw !important;
+  }
+  /*Language selector*/
+.dropdown {
+  right: 0 ;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  transition: all 0.5s;
+}
 }
 </style>
 
