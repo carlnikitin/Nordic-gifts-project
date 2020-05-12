@@ -6,7 +6,9 @@
     
     <img class="logo" :src="logo">
     <h1 class="main_text">Choose the right items to create your desirable souvenir</h1>
-    <img class="logo" :src="elf">
+    <img class="head" :src="head">
+    <img class="body" :src="body">
+    <img class="feet" :src="feet">
 
     <!--Scroll-->
     <VueNextLevelScroll target=".arrow">
@@ -23,10 +25,10 @@
     <!--Language selector-->
      <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <img alt="English" src="../assets/Great_Britain.png" width="30" height="20">
+    <img border="0" alt="English" src="../assets/Great_Britain.png" width="30" height="20">
       </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="http://localhost:8081"><img alt="Estonian" src="../assets/Estonia.png" width="30" height="20"></a>
+          <a class="dropdown-item" href="http://localhost:8081"><img border="0" alt="Estonian" src="../assets/Estonia.png" width="30" height="20"></a>
         </div>
     </div>
 
@@ -93,24 +95,24 @@ export default {
     data () {
         return {
             logo: require('@/assets/logo.png'),
-            elf: require('@/assets/elf.png'),
+            head: require('@/assets/head.png'),
+            body: require('@/assets/body.png'),
+            feet: require('@/assets/feet.png'),
             post:{}
         }
     },
         methods: {
-      addPost(){
-        let uri = 'http://localhost:4000/posts/add';
-        this.axios.post(uri, this.post).then(() => {
+      async addPost(){
+        let uri = await this.$http.post('/posts/add', this.post);
         this.post.name = ''; 
         this.post.email = ''; 
         this.post.number = '';
         this.post.body = '';
         this.$alert(
-          "Your order has been accepted",
+          "Your order has been placed",
           "Thank you",
           "success"
           );
-        });
       },
     }
 }
@@ -129,19 +131,46 @@ body {
     background-size: auto;
 }
 
-
+/*Logo*/
 .logo {
-    width: 350px;
-    margin: auto;
+  width: 350px !important;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Souvenir head, body and feet*/
+.body {
+    width: 180px !important;
+    margin: auto !important;
     display: block;
 }
 
+.head {
+    width: 270px !important;
+    margin: 0px auto -18px auto;
+    display: block;
+}
+
+.feet {
+    width: 180px !important;
+    margin: -10px auto 0px auto;
+    display: block;
+}
+
+/*Main text and tooltip*/
 .main_text  {
     font-family: 'Charm', cursive;
     color: #707070;
     font-size: 34px;
     text-align: center;
+    background-color: transparent !important;
+    border: none;
+    cursor: default !important;
+    display: block;
+    margin: 30px auto 30px auto;
 }
+
 
 /*Textarea style*/
 textarea {
@@ -160,10 +189,12 @@ margin-bottom: 80px;
 resize: none; /*remove the resize handle on the bottom right*/
 }
 
+/*Text*/
 #text{
   font-size: 20px;
 }
 
+/*Textarea*/
 textarea::-webkit-input-placeholder {
 font-family: 'Catamaran', sans-serif;
 font-size: 20px;
@@ -392,6 +423,65 @@ label {
   background-color: #FF9F7F;
 }
 
+/*Language selector*/
+.dropdown {
+  right: 0;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  transition: all 0.5s;
+}
+
+.btn, .btn:visited {
+  background-color: #333;
+  opacity: 0.6;
+  border:none;
+  box-shadow: 0;
+  border-radius: 0px;
+  transition: all 0.5s;
+}
+.dropdown-item:hover, .dropdown-item, .dropdown-item:visited {
+  background-color: #333;
+}
+
+.btn:hover {
+  background-color: #333;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+
+.dropdown-menu.show{
+  background-color: #333;
+  opacity: 0.8;
+  transform: translate3d(-1px, -46px, 0px) !important;
+  transition: all 0.5s;
+  border-radius: 0px;
+}
+
+.btn:focus {
+    background-color: #333;
+  opacity: 0.8;
+  box-shadow: 0 !important;
+}
+
+.show>.btn-secondary.dropdown-toggle:focus, .btn-secondary:focus, .btn:focus {
+  box-shadow: none;
+}
+.est_language {
+  margin-right: 20px !important;
+}
+
+/*Tooltip*/
+.tooltip-big-text {
+  --balloon-font-size: 15px;
+  --balloon-color: #707070;
+}
+
+h1 {
+  display: none;
+}
+
+
 
 /*Mobile view*/
 /*Textarea*/
@@ -400,12 +490,56 @@ label {
     width: 95%;
   }
   .arrow {
-    bottom: 20px;
+    bottom: 0px !important;
+  }
+  .main_text {
+    font-size: 20px;
   }
 
   input {
     border: none;
   }
+
+  .head {
+    width: 200px !important;
+    margin: 0px auto -10px auto;
+  }
+
+  .body, .feet {
+    width: 150px !important;
+    margin: -7px auto 0px auto;
+  }
+  .app {
+    width: 100vw !important;
+  }
+  /*Language selector*/
+.dropdown {
+  right: 0 ;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  transition: all 0.5s;
+}
+.tooltip-big-text {
+  display: none;
+}
+h1 {
+  display: block;
+  margin: auto;
+  font-size: 35px;
+  text-align: center;
+  font-family: 'Charm', cursive;
+  color: #707070;
+  margin: 30px auto 40px auto;
+  margin-left: 0px !important;
+}
+.logo {
+  width: 300px !important;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 }
 </style>
 

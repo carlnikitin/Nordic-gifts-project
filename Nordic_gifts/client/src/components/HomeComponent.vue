@@ -104,9 +104,8 @@ export default {
         }
     },
         methods: {
-      addPost(){
-        let uri = 'http://localhost:4000/posts/add';
-        this.axios.post(uri, this.post).then(() => {
+      async addPost(){
+        let uri = await this.$http.post('/posts/add', this.post);
         this.post.name = ''; 
         this.post.email = ''; 
         this.post.number = '';
@@ -116,7 +115,6 @@ export default {
           "Täname",
           "success"
           );
-        });
       },
     }
 }
@@ -138,6 +136,9 @@ body {
 /*Logo*/
 .logo {
   width: 350px !important;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*Souvenir head, body and feet*/
@@ -536,6 +537,9 @@ h1 {
 }
 .logo {
   width: 300px !important;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 }

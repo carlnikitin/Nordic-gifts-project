@@ -3,6 +3,9 @@
       <h1>Tellijate andmed</h1><br />
 
         <table class="table table-hover">
+
+              <a class="nav-link" @click="logUserOut">Logout</a>
+
             <thead>
             <tr>
               <th>Nimi</th>
@@ -13,6 +16,7 @@
                <th>Kustuta</th>
             </tr>
             </thead>
+
             <tbody>
                 <tr v-for="post in posts" :key="post._id">
                   <td>{{ post.name }}</td>
@@ -23,6 +27,7 @@
                   <td><button class="delete-button btn btn-danger" @click.prevent="deletePost(post._id)">Kustuta</button></td>
                 </tr>
             </tbody>
+
         </table>
   </div>
 </template>
@@ -32,24 +37,28 @@
       data() {
         return {
           posts: []
-        }
+        };
       },
-      created() {
-      let uri = 'http://localhost:4000/posts';
-      this.axios.get(uri).then(response => {
+     created() {
+      let uri = '/posts';
+      this.$http.get(uri).then(response => {
         this.posts = response.data;
       });
     },
     methods: {
-      deletePost(id)
+    logUserOut() {
+      localStorage.removeItem("jwt");
+      this.$router.push("/login");
+    },
+    deletePost(id)
       {
-        let uri = `http://localhost:4000/posts/delete/${id}`;
-        this.axios.delete(uri).then(response => {
+        let uri = `/posts/delete/${id}`;
+        this.$http.delete(uri).then(response => {
           this.posts.splice(this.posts.indexOf(id), 1);
         });
       }
     }
-  }
+  };
 </script>
 
 <style>
