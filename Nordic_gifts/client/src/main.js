@@ -15,44 +15,83 @@ Vue.use(VueRouter);
 import VueAxios from 'vue-axios';
 import axios from 'axios';
 
-Vue.use(VueAxios, axios);
+Vue.use(VueAxios);
 
+const base = axios.create({
+  baseURL: "http://localhost:4000"
+});
+
+Vue.prototype.$http = base;
 Vue.config.productionTip = false;
 
-import HomeComponent from './components/HomeComponent.vue';
 import HomeComponentEng from './components/HomeComponentEng.vue';
-import CreateComponent from './components/CreateComponent.vue';
 import IndexComponent from './components/IndexComponent.vue';
 import EditComponent from './components/EditComponent.vue';
 
+
 const routes = [
   {
-      name: 'home',
-      path: '/',
-      component: HomeComponent
+      path: "/",
+      name: "home",
+      component: () => import("../src/views/HomeComponent.vue")
   },
   {
-    name: 'homeEng',
-    path: '/eng',
-    component: HomeComponentEng
+    path: "/eng",
+    name: "homeEng",
+    component: () => import("../src/views/HomeComponentEng.vue")
 },
-  {
-      name: 'create',
-      path: '/create',
-      component: CreateComponent
-  },
   {
       name: 'posts',
       path: '/tellijate_andmed',
-      component: IndexComponent
+      component: IndexComponent,
+      meta: {
+        requiresAuth: true
+      }
   },
   {
       name: 'edit',
       path: '/edit/:id',
-      component: EditComponent
+      component: EditComponent,
+      meta: {
+        requiresAuth: true
+      }
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: () => import("../src/views/login.vue")
+  },
+  {
+    path: "/register",
+    name: "register",
+    component: () => import("../src/views/register.vue")
   }
 ];
 
-const router = new VueRouter({ mode: 'history', routes: routes});
+const router = new VueRouter({ 
+  mode: "history", 
+  base: process.env.BASE_URL, 
+  routes
+});
 
-new Vue(Vue.util.extend({ router }, App)).$mount('#app');
+router.beforeEach((to, from, next) => {
+    if (to.matched.some(record => record.meta.requiresAuth)) {
+      if (localStorage.getItem("jwt") == null) {
+        next({
+          path: "/"
+        });
+      } else {
+        next();
+      }
+    } else {
+      next();
+    }
+  });
+
+  new Vue({
+    router,
+    render: h => h(App)
+  }).$mount("#app");
+  
+
+export default router;
