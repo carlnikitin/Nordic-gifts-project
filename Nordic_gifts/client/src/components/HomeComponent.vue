@@ -8,9 +8,9 @@
     <!--Main text and tooltip (Balloon.css)-->
     <button data-balloon-length="large" aria-label="Kliki pea/keha/jalgade peale, et valida oma soovidele vastav element. Kui oled elemendid ära valinud, keri alla ja täida enda andmed, et esitada tellimus" data-balloon-pos="right" class="main_text tooltip-big-text">Vali sobivad elemendid, et luua meelepärane suveniir</button>
     <h1>Vali sobivad elemendid, et luua meelepärane suveniir</h1>
-    <img class="head" :src="head">
-    <img class="body" :src="body">
-    <img class="feet" :src="feet">
+    <img class="head" :src="head" @click="loadHead();">
+    <img class="body" :src="body" @click="loadBody();">
+    <img class="feet" :src="feet" @click="loadFeet();">
 
     <!--Arrow scroll down-->
     <VueNextLevelScroll target=".arrow">
@@ -97,15 +97,42 @@ export default {
     data () {
         return {
             logo: require('@/assets/logo.png'),
-            head: require('@/assets/head.png'),
-            body: require('@/assets/body.png'),
-            feet: require('@/assets/feet.png'),
-            post:{}
+            head: null,
+            index2: 0,
+            imagesHead: [
+      require('@/assets/head.png'),
+      'https://jp.vuejs.org/images/logo.png',
+      'https://jsfiddle.net/img/logo@2x.png',
+      'https://www.epicentrofestival.com/wp-content/uploads/2019/11/Cute-Animals-Woodland-Clipart-Set-Clip-Art-Department-Cute-Clipart-Animals-Fox-720x1045.jpg'
+      ],
+            body: null,
+            index1: 0,
+            imagesBody: [
+      require('@/assets/body.png'),
+      'https://jp.vuejs.org/images/logo.png',
+      'https://jsfiddle.net/img/logo@2x.png',
+      'https://www.epicentrofestival.com/wp-content/uploads/2019/11/Cute-Animals-Woodland-Clipart-Set-Clip-Art-Department-Cute-Clipart-Animals-Fox-720x1045.jpg'
+      ],
+            feet: null,
+            index: 0,
+            imagesFeet: [
+      require('@/assets/feet.png'),
+      'https://jp.vuejs.org/images/logo.png',
+      'https://jsfiddle.net/img/logo@2x.png',
+      'https://www.epicentrofestival.com/wp-content/uploads/2019/11/Cute-Animals-Woodland-Clipart-Set-Clip-Art-Department-Cute-Clipart-Animals-Fox-720x1045.jpg'
+      ],
+            post:{},
         }
-    },
+      },
+        created() {
+        this.loadFeet(),
+        this.loadBody(),
+        this.loadHead()
+        },
         methods: {
-      async addPost(){
-        let uri = await this.$http.post('/posts/add', this.post);
+        async addPost(){
+        let uri = '/posts/add';
+        this.$http.post(uri, this.post).then(() => {
         this.post.name = ''; 
         this.post.email = ''; 
         this.post.number = '';
@@ -115,8 +142,21 @@ export default {
           "Täname",
           "success"
           );
+          });
       },
-    }
+            loadFeet() {
+        this.feet = this.imagesFeet[this.index];
+        this.index = (this.index + 1) % this.imagesFeet.length;
+    },
+      loadBody() {
+        this.body = this.imagesBody[this.index1];
+        this.index1 = (this.index1 + 1) % this.imagesBody.length;
+    },
+      loadHead() {
+        this.head = this.imagesHead[this.index2];
+        this.index2 = (this.index2 + 1) % this.imagesHead.length;
+    },
+}
 }
 
 
@@ -146,18 +186,21 @@ body {
     width: 180px !important;
     margin: auto !important;
     display: block;
+    cursor: pointer;
 }
 
 .head {
     width: 270px !important;
     margin: 0px auto -18px auto;
     display: block;
+    cursor: pointer;
 }
 
 .feet {
     width: 180px !important;
     margin: -10px auto 0px auto;
     display: block;
+    cursor: pointer;
 }
 
 /*Main text and tooltip*/
