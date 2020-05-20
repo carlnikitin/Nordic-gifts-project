@@ -24,7 +24,6 @@ const base = axios.create({
 Vue.prototype.$http = base;
 Vue.config.productionTip = false;
 
-import HomeComponentEng from './components/HomeComponentEng.vue';
 import IndexComponent from './components/IndexComponent.vue';
 import EditComponent from './components/EditComponent.vue';
 
