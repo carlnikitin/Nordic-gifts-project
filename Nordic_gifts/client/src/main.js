@@ -18,7 +18,7 @@ import axios from 'axios';
 Vue.use(VueAxios);
 
 const base = axios.create({
-  baseURL: "https://server-app-nordic.herokuapp.com:4000"
+  baseURL: "https://server-app-nordic.herokuapp.com"
 });
 
 Vue.prototype.$http = base;
