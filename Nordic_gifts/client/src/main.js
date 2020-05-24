@@ -18,7 +18,7 @@ import axios from 'axios';
 Vue.use(VueAxios);
 
 const base = axios.create({
-  baseURL: "http://localhost:4000"
+  baseURL: process.env.BASE_URI || "http://localhost:4000"
 });
 
 Vue.prototype.$http = base;
