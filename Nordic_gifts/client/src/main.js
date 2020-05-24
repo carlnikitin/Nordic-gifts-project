@@ -18,13 +18,12 @@ import axios from 'axios';
 Vue.use(VueAxios);
 
 const base = axios.create({
-  baseURL: process.env.BASE_URL
+  baseURL: "https://server-app-nordic.herokuapp.com:4000"
 });
 
 Vue.prototype.$http = base;
 Vue.config.productionTip = false;
 
-import HomeComponentEng from './components/HomeComponentEng.vue';
 import IndexComponent from './components/IndexComponent.vue';
 import EditComponent from './components/EditComponent.vue';
 
