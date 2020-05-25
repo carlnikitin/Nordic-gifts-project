@@ -28,7 +28,7 @@
     <img border="0" alt="English" src="../assets/Great_Britain.png" width="30" height="20">
       </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="http://localhost:8081"><img border="0" alt="Estonian" src="../assets/Estonia.png" width="30" height="20"></a>
+          <a class="dropdown-item" href="https://client-app-nordic.herokuapp.com"><img border="0" alt="Estonian" src="../assets/Estonia.png" width="30" height="20"></a>
         </div>
     </div>
 
@@ -136,8 +136,8 @@ export default {
         this.post.number = '';
         this.post.body = '';
         this.$alert(
-          "Tellimus on edastatud",
-          "Täname",
+          "Order has been forwarded",
+          "Thank you",
           "success"
           );
           });
