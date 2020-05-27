@@ -164,10 +164,6 @@ export default {
 </script>
 
 <style>
-body {
-    background-image: url("~@/assets/background.png");
-    background-size: auto;
-}
 /*Logo*/
 .logo {
   width: 350px !important;
