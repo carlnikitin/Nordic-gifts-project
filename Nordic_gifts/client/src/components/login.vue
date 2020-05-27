@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container logincon">
     <div class="row">
       <div class="col-lg-6 offset-lg-3 col-sm-10 offset-sm-1">
         <form
@@ -76,20 +76,11 @@ export default {
 </script>
 
 <style>
-body {
-    padding: 0px;
-    margin: 0px;
-    background-image: url("~@/assets/background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-size: auto;
-}
 .logo {
   max-width: 45%;
   margin-bottom: 25px;
 }
-.container {
+.logincon {
     margin: 0 auto;
     width: 100%; 
     padding-right: 15px;

@@ -62,6 +62,15 @@
 </script>
 
 <style>
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url("~@/assets/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-size: auto;
+}
 .delete-button {
   background-color: #E64B4B ;
 }
