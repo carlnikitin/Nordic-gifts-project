@@ -173,7 +173,6 @@ body {
     background-size: cover;
     background-size: auto;
 }
-
 /*Logo*/
 .logo {
   width: 350px !important;

@@ -2,9 +2,9 @@
   <div>
       <h1>Tellijate andmed</h1><br />
 
-        <table class="table table-hover">
+        <button class="edit-button btn btn-primary logout" @click="logUserOut">Logi välja</button>
 
-            <button class="edit-button btn btn-primary logout" @click="logUserOut">Logi välja</button>
+        <table class="table table-hover">
 
             <thead>
             <tr>
@@ -62,6 +62,15 @@
 </script>
 
 <style>
+body {
+    padding: 0px;
+    margin: 0px;
+    background-image: url("~@/assets/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-size: auto;
+}
 .delete-button {
   background-color: #E64B4B ;
 }

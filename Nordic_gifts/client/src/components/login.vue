@@ -12,7 +12,7 @@
             type="text"
             id="email"
             class="form-control mb-5"
-            placeholder="Email"
+            placeholder="E-mail"
             v-model="login.email"
             required
           />
@@ -22,7 +22,7 @@
             type="password"
             id="password"
             class="form-control mb-5"
-            placeholder="Password"
+            placeholder="Parool"
             v-model="login.password"
             required
           />
@@ -76,6 +76,15 @@ export default {
 </script>
 
 <style>
+body {
+    padding: 0px;
+    margin: 0px;
+    background-image: url("~@/assets/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-size: auto;
+}
 .logo {
   max-width: 40%;
   margin-bottom: 15px;
