@@ -35,7 +35,7 @@
 
           <!-- Sign in button -->
           <center>
-            <button class="btn btn-primary btn-block w-75 my-4" type="submit">
+            <button class="btn btn-info btn-block w-75 my-4" type="submit">
               Login Sisse
             </button>
           </center>
@@ -76,6 +76,15 @@ export default {
 </script>
 
 <style>
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url("~@/assets/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-size: auto;
+}
 .logo {
   max-width: 45%;
   margin-bottom: 25px;
