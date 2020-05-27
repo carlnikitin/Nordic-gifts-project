@@ -4,7 +4,7 @@
 
         <table class="table table-hover">
 
-              <a class="nav-link" @click="logUserOut">Logout</a>
+            <button class="edit-button btn btn-primary logout" @click="logUserOut">Logi välja</button>
 
             <thead>
             <tr>
@@ -108,5 +108,8 @@
 /* selected link */
 .edit-button:active {
   background-color: #4B94E6;
+}
+.logout {
+  margin-bottom: 15px;
 }
 </style>

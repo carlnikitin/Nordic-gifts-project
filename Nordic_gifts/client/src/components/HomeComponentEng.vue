@@ -5,12 +5,14 @@
     <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
     
     <img class="logo" :src="logo">
-    <h1 class="main_text">Choose the right items to create your desirable souvenir</h1>
+    <!--Main text and tooltip (Balloon.css)-->
+    <button data-balloon-length="large" aria-label="Click on the head/body/legs to select the item you want. Once you have selected the items, scroll down and fill in your details to place an order" data-balloon-pos="right" class="main_text tooltip-big-text">Choose the right items to create your desirable souvenir</button>
+    <h1>Choose the right items to create your desirable souvenir</h1>
     <img class="head" :src="head" @click="loadHead();">
     <img class="body" :src="body" @click="loadBody();">
     <img class="feet" :src="feet" @click="loadFeet();">
 
-    <!--Scroll-->
+   <!--Arrow scroll down-->
     <VueNextLevelScroll target=".arrow">
     <div class="wrapper">
       <div class="arrow">
@@ -85,6 +87,7 @@
 </template>
 <script>
 import VueNextLevelScroll from "vue-next-level-scroll/";
+import 'balloon-css';
 
 
 export default {

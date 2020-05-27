@@ -163,15 +163,6 @@ export default {
 </script>
 
 <style>
-body {
-    padding: 0px;
-    margin: 0px;
-    background-image: url("~@/assets/background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-size: auto;
-}
 
 /*Logo*/
 .logo {

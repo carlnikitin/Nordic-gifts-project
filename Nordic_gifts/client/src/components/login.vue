@@ -4,9 +4,10 @@
       <div class="col-lg-6 offset-lg-3 col-sm-10 offset-sm-1">
         <form
           class="text-center border border-primary p-5"
-          style="margin-top:70px;height:auto;padding-top:100px !important;"
           @submit.prevent="loginUser"
         >
+          <img class="logo" :src="logo">
+          <!-- E-mail -->
           <input
             type="text"
             id="email"
@@ -35,7 +36,7 @@
           <!-- Sign in button -->
           <center>
             <button class="btn btn-primary btn-block w-75 my-4" type="submit">
-              Sign in
+              Login Sisse
             </button>
           </center>
         </form>
@@ -49,10 +50,11 @@ import swal from "sweetalert";
 export default {
   data() {
     return {
+      logo: require('@/assets/logo.png'),
       login: {
         email: "",
         password: ""
-      }
+      },
     };
   },
   methods: {
@@ -72,3 +74,32 @@ export default {
   }
 };
 </script>
+
+<style>
+.logo {
+  max-width: 40%;
+  margin-bottom: 15px;
+}
+.container {
+    margin: 0 auto;
+    width: 100%; 
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 60px;
+}
+.border-primary {
+  border-color: #d6dbe0!important;
+  -webkit-box-shadow: 1px 1px 15px 1px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    1px 1px 15px 1px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         1px 1px 15px 1px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+@media only screen and (max-width: 900px) {
+  .btn {
+  width: 80%; 
+}
+.logo {
+  max-width: 70%;
+    margin-bottom: 25px;
+}
+}
+</style>
