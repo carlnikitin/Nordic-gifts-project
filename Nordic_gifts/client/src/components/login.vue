@@ -86,8 +86,8 @@ body {
     background-size: auto;
 }
 .logo {
-  max-width: 40%;
-  margin-bottom: 15px;
+  max-width: 45%;
+  margin-bottom: 25px;
 }
 .container {
     margin: 0 auto;
@@ -107,8 +107,7 @@ body {
   width: 80%; 
 }
 .logo {
-  max-width: 70%;
-    margin-bottom: 25px;
+  max-width: 100%;
 }
 }
 </style>
