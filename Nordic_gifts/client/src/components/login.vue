@@ -81,11 +81,10 @@ export default {
   margin-bottom: 25px;
 }
 .logincon {
-    margin: 0 auto;
     width: 100%; 
     padding-right: 15px;
     padding-left: 15px;
-    padding-top: 60px;
+    padding-top: 80px;
 }
 .border-primary {
   border-color: #d6dbe0!important;

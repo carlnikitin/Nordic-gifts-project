@@ -101,26 +101,29 @@ export default {
             head: null,
             index2: 0,
             imagesHead: [
-      require('@/assets/head.png'),
-      'https://jp.vuejs.org/images/logo.png',
-      'https://jsfiddle.net/img/logo@2x.png',
-      'https://www.epicentrofestival.com/wp-content/uploads/2019/11/Cute-Animals-Woodland-Clipart-Set-Clip-Art-Department-Cute-Clipart-Animals-Fox-720x1045.jpg'
+      require('@/assets/Head/head.png'),
+      require('@/assets/Head/head1.png'),
+      require('@/assets/Head/head2.png'),
+      require('@/assets/Head/head3.png')
       ],
             body: null,
             index1: 0,
             imagesBody: [
-      require('@/assets/body.png'),
-      'https://jp.vuejs.org/images/logo.png',
-      'https://jsfiddle.net/img/logo@2x.png',
-      'https://www.epicentrofestival.com/wp-content/uploads/2019/11/Cute-Animals-Woodland-Clipart-Set-Clip-Art-Department-Cute-Clipart-Animals-Fox-720x1045.jpg'
+      require('@/assets/Body/body.png'),
+      require('@/assets/Body/body1.png'),
+      require('@/assets/Body/body2.png'),
+      require('@/assets/Body/body3.png'),
+      require('@/assets/Body/body4.png')
       ],
             feet: null,
             index: 0,
             imagesFeet: [
-      require('@/assets/feet.png'),
-      'https://jp.vuejs.org/images/logo.png',
-      'https://jsfiddle.net/img/logo@2x.png',
-      'https://www.epicentrofestival.com/wp-content/uploads/2019/11/Cute-Animals-Woodland-Clipart-Set-Clip-Art-Department-Cute-Clipart-Animals-Fox-720x1045.jpg'
+      require('@/assets/Feet/feet.png'),
+      require('@/assets/Feet/feet1.png'),
+      require('@/assets/Feet/feet2.png'),
+      require('@/assets/Feet/feet3.png'),
+      require('@/assets/Feet/feet4.png'),
+      require('@/assets/Feet/feet5.png')
       ],
             post:{},
         }
