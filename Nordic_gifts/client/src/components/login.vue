@@ -97,7 +97,7 @@ export default {
   width: 80%; 
 }
 .logo {
-  max-width: 100%;
+  max-width: 50%;
 }
 }
 </style>

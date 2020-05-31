@@ -12,8 +12,7 @@
               <th>E-mail</th>
               <th>Number</th>
               <th>Muu info</th>
-              <th>Muuda</th>
-               <th>Kustuta</th>
+              <th>Muuda/Kustuta</th>
             </tr>
             </thead>
 
@@ -23,8 +22,7 @@
                   <td>{{ post.email }}</td>
                   <td>{{ post.number }}</td>
                   <td>{{ post.body }}</td>
-                  <td><router-link :to="{name: 'edit', params: { id: post._id }}" class="edit-button btn btn-primary">Muuda</router-link></td>
-                  <td><button class="delete-button btn btn-danger" @click.prevent="deletePost(post._id)">Kustuta</button></td>
+                  <td><router-link :to="{name: 'edit', params: { id: post._id }}" class="edit-button btn btn-primary">Muuda/Kustuta</router-link></td>
                 </tr>
             </tbody>
 
@@ -49,14 +47,7 @@
     logUserOut() {
       localStorage.removeItem("jwt");
       this.$router.push("/login");
-    },
-    deletePost(id)
-      {
-        let uri = `/posts/delete/${id}`;
-        this.$http.delete(uri).then(response => {
-          this.posts.splice(this.posts.indexOf(id), 1);
-        });
-      }
+    }
     }
   };
 </script>

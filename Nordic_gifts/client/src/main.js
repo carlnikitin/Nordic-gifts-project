@@ -24,8 +24,8 @@ const base = axios.create({
 Vue.prototype.$http = base;
 Vue.config.productionTip = false;
 
-import IndexComponent from './components/IndexComponent.vue';
-import EditComponent from './components/EditComponent.vue';
+import IndexComponent from './views/IndexComponent.vue';
+import EditComponent from './views/EditComponent.vue';
 
 
 const routes = [
@@ -77,7 +77,7 @@ router.beforeEach((to, from, next) => {
     if (to.matched.some(record => record.meta.requiresAuth)) {
       if (localStorage.getItem("jwt") == null) {
         next({
-          path: "/"
+          path: "/login"
         });
       } else {
         next();

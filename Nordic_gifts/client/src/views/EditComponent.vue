@@ -2,6 +2,7 @@
   <div>
     <h1>Muuda andmeid</h1>
     <form class="margin" @submit.prevent="updatePost">
+     <button class="edit-button btn btn-primary" @click.prevent="Back()">Tagasi</button>
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
@@ -28,6 +29,7 @@
         </div>
         <div class="form-group">
           <button class="btn btn-primary button">Muuda</button>
+          <button class="delete-button btn btn-danger" @click.prevent="deletePost(post._id)">Kustuta</button>
         </div>
     </form>
   </div>
@@ -53,7 +55,16 @@
           this.$http.post(uri, this.post).then(() => {
             this.$router.push({name: 'posts'});
           });
-        }
+        },
+        deletePost(id){
+        let uri = `/posts/delete/${this.$route.params.id}`;
+        this.$http.delete(uri, this.post).then(response => {
+          this.$router.push({name: 'posts'});
+        });
+      },
+        Back() {
+        this.$router.push({name: 'posts'});
+      }
       }
     }
 </script>
