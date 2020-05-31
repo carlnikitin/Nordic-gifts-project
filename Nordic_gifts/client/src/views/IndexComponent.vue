@@ -59,6 +59,7 @@ body {
 }
 .delete-button {
   background-color: #E64B4B ;
+  margin-left: 70px;
 }
 
 .edit-button {

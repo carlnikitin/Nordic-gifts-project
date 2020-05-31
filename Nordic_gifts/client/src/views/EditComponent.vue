@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>Muuda andmeid</h1>
+    <h1>Muuda, kustuta</h1>
     <form class="margin" @submit.prevent="updatePost">
-     <button class="edit-button btn btn-primary" @click.prevent="Back()">Tagasi</button>
+     <button class="edit-button btn btn-primary button" @click.prevent="Back()">Tagasi</button>
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
