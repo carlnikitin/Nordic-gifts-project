@@ -31,11 +31,11 @@ postRoutes.route('/').get(function (req, res) {
 // Defined edit route
 postRoutes.route('/edit/:id').get(function (req, res) {
   let id = req.params.id;
-  Post.findById(id, function (err, post){
+  Post.findById(id, function (err, posts){
       if(err) {
         res.json(err);
       }
-      res.json(post);
+      res.json(posts);
   });
 });
 
@@ -48,6 +48,7 @@ postRoutes.route('/update/:id').post(function (req, res) {
         post.name = req.body.name;
         post.email = req.body.email;
         post.number = req.body.number;
+        post.pieces = req.body.pieces;
         post.body = req.body.body;
         post.save().then(() => {
           res.json('Update complete');
@@ -59,7 +60,7 @@ postRoutes.route('/update/:id').post(function (req, res) {
   });
 });
 
-// Defined delete | remove | destroy route
+// Delete, remove, destroy route
 postRoutes.route('/delete/:id').delete(function (req, res) {
     Post.findByIdAndRemove({_id: req.params.id}, function(err){
         if(err) res.json(err);

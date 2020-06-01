@@ -12,6 +12,9 @@ let Post = new Schema({
   number: {
     type: String
   },
+  pieces: {
+    type: String
+  },
   body: {
     type: String
   }

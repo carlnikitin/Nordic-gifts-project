@@ -63,6 +63,13 @@
         <div class="row name justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
+          <number-input  required="required"  placeholder="Kogus (max 10)" :min="1" :max="10" inline controls v-model="post.pieces"></number-input>
+          </div>
+        </div>
+        </div>
+        <div class="row name justify-content-center">
+        <div class="col-sm-12 col-lg-6">
+          <div class="form-group">
             <label></label>
             <textarea class="form-control" v-model="post.body" rows="5" placeholder="Soovid midagi lisada oma suveniirile? Anna meile teada"></textarea>
           </div>
@@ -256,6 +263,10 @@ font-size: 20px;
 textarea:-ms-input-placeholder {
 font-family: 'Catamaran', sans-serif;  
 font-size: 20px;
+}
+
+.number-input--inline>input[data-v-3580ff4f] {
+  width: 6.7rem !important;
 }
 
 /*Form*/

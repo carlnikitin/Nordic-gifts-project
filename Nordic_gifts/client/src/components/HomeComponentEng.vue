@@ -64,6 +64,13 @@
         <div class="row name justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
+          <number-input  required="required" placeholder="Pieces (max 10)" :min="1" :max="10" inline controls v-model="post.pieces"></number-input>
+          </div>
+        </div>
+        </div>
+        <div class="row name justify-content-center">
+        <div class="col-sm-12 col-lg-6">
+          <div class="form-group">
             <label></label>
             <textarea class="form-control" v-model="post.body" rows="5" placeholder="Want to add something to your souvenir? Let us know here"></textarea>
           </div>
@@ -231,6 +238,10 @@ resize: none; /*remove the resize handle on the bottom right*/
 /*Text*/
 #text{
   font-size: 20px;
+}
+
+.number-input--inline>input[data-v-3580ff4f] {
+  width: 6.7rem !important;
 }
 
 /*Textarea*/

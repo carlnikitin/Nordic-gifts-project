@@ -11,6 +11,7 @@
               <th>Nimi</th>
               <th>E-mail</th>
               <th>Number</th>
+              <th>Tükki Arv</th>
               <th>Muu info</th>
               <th>Muuda/Kustuta</th>
             </tr>
@@ -21,6 +22,7 @@
                   <td>{{ post.name }}</td>
                   <td>{{ post.email }}</td>
                   <td>{{ post.number }}</td>
+                  <td>{{ post.pieces }}</td>
                   <td>{{ post.body }}</td>
                   <td><router-link :to="{name: 'edit', params: { id: post._id }}" class="edit-button btn btn-primary">Muuda/Kustuta</router-link></td>
                 </tr>

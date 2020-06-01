@@ -1,13 +1,15 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
 import 'bootstrap'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'materialize-css/dist/css/materialize.css'
-import 'materialize-css'
+import 'materialize-css';
 
 import VueSimpleAlert from "vue-simple-alert";
+import VueNumberInput from '@chenfengyuan/vue-number-input';
 
 Vue.use(VueSimpleAlert);
+Vue.use(VueNumberInput);
 
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
@@ -59,11 +61,6 @@ const routes = [
     path: "/login",
     name: "login",
     component: () => import("../src/views/login.vue")
-  },
-  {
-    path: "/register",
-    name: "register",
-    component: () => import("../src/views/register.vue")
   }
 ];
 
