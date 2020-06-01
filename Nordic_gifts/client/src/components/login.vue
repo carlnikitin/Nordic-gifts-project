@@ -27,11 +27,6 @@
             required
           />
 
-          <p>
-            Dont have an account??<router-link to="/register"
-              >click here</router-link
-            >
-          </p>
 
           <!-- Sign in button -->
           <center>
