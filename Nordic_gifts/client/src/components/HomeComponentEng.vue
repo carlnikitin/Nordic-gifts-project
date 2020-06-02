@@ -6,8 +6,8 @@
     
     <img class="logo" :src="logo">
     <!--Main text and tooltip (Balloon.css)-->
-    <button data-balloon-length="large" aria-label="Click on the head/body/legs to select the item you want. Once you have selected the items, scroll down and fill in your details to place an order" data-balloon-pos="right" class="main_text tooltip-big-text">Choose the right items to create your desirable souvenir</button>
-    <h1>Choose the right items to create your desirable souvenir</h1>
+    <button data-balloon-length="large" aria-label="Click on the head, body, legs to select the item you want. Once you have selected the items, scroll down and fill in your details to place an order" data-balloon-pos="right" class="main_text tooltip-big-text">Choose the right items to create your desirable souvenir<br>(hover on this text to see more information)</button>
+    <h1>Choose the right items to create your desirable souvenir<br>(Click on head, body, legs to select the desirable item. When the choice is made then go down and send your order)</h1>
     <img class="head" :src="head" @click="loadHead();">
     <img class="body" :src="body" @click="loadBody();">
     <img class="feet" :src="feet" @click="loadFeet();">
@@ -56,7 +56,7 @@
         <div class="row name justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group input-field">
-            <label>Phone number</label>
+            <label>Phone number (8 numbers)</label>
             <input required="required" type="tel" pattern="[0-9]{8}" class="validate form-control" v-model="post.number">
           </div>
         </div>
@@ -535,7 +535,7 @@ h1 {
 
 /*Mobile view*/
 /*Textarea*/
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 905px) {
   textarea {
     width: 95%;
   }
@@ -549,7 +549,9 @@ h1 {
   input {
     border: none;
   }
-
+.number-input--inline>input[data-v-3580ff4f] {
+  width: 7.1rem !important;
+}
   .head {
     width: 200px !important;
     margin: 0px auto -10px auto;

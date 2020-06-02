@@ -6,8 +6,8 @@
     
     <img class="logo" :src="logo">
     <!--Main text and tooltip (Balloon.css)-->
-    <button data-balloon-length="large" aria-label="Kliki pea/keha/jalgade peale, et valida oma soovidele vastav element. Kui oled elemendid ära valinud, keri alla ja täida enda andmed, et esitada tellimus" data-balloon-pos="right" class="main_text tooltip-big-text">Vali sobivad elemendid, et luua meelepärane suveniir</button>
-    <h1>Vali sobivad elemendid, et luua meelepärane suveniir</h1>
+    <button data-balloon-length="large" aria-label="Kliki pea, keha, jalgade peale, et valida oma soovidele vastav element. Kui oled elemendid ära valinud, keri alla ja täida enda andmed, et esitada tellimus" data-balloon-pos="right" class="main_text tooltip-big-text">Vali sobivad elemendid, et luua meelepärane suveniir<br>(hõljudes selle teksti peale näeb rohkem infot)</button>
+    <h1>Vali sobivad elemendid, et luua meelepärane suveniir <br>(Kliki pea, keha, jalgade peale, et valida sobiv element. Valik tehtud siis saada allpoolt tellimus edasi)</h1>
     <img class="head" :src="head" @click="loadHead();">
     <img class="body" :src="body" @click="loadBody();">
     <img class="feet" :src="feet" @click="loadFeet();">
@@ -55,7 +55,7 @@
         <div class="row name justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group input-field">
-            <label>Telefon</label>
+            <label>Telefon (8 numbrit)</label>
             <input required="required" type="tel" pattern="[0-9]{8}" class="validate form-control" v-model="post.number">
           </div>
         </div>
@@ -539,7 +539,7 @@ h1 {
 
 /*Mobile view*/
 /*Textarea*/
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 905px) {
   textarea {
     width: 95%;
   }
@@ -553,7 +553,9 @@ h1 {
   input {
     border: none;
   }
-
+.number-input--inline>input[data-v-3580ff4f] {
+  width: 7.1rem !important;
+}
   .head {
     width: 200px !important;
     margin: 0px auto -10px auto;
