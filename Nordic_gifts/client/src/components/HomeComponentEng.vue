@@ -593,5 +593,10 @@ h1 {
 }
 
 }
+@media only screen and (max-width: 820px) {
+  .arrow ul {
+    display: none;
+  }
+}
 </style>
 
