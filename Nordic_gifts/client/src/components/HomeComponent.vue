@@ -336,7 +336,7 @@ label {
 
 /*Footer content eg email and phone*/
 #footer-content h5 {
-  margin: 20px;
+  margin: 30px;
 }
 
 
@@ -434,7 +434,7 @@ form {
 /*Footer*/
 footer {
   background: #443838;
-  height: 180px;
+  height: 210px;
   position:relative;
   padding-top: 5px;
   margin-top: 210px;
@@ -450,11 +450,12 @@ footer:before {
 }
 a {
   text-decoration: none;
-  color: #fcfcfc;
+  color: #e6e6e6;
 }
 a:hover{
   text-decoration: none;
   color: #b8b8b8;
+  transition: .3s cubic-bezier(.25,.8,.25,1);
 }
 h5 {
 color: white;
