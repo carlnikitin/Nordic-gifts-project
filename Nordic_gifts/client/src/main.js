@@ -41,6 +41,16 @@ const routes = [
     name: "homeEng",
     component: () => import("../src/views/HomeComponentEng.vue")
 },
+{
+  path: "/privaatuspoliitika",
+  name: "privaatsus",
+  component: privaatsus
+},
+{
+  path: "/privacypolicy",
+  name: "privacy",
+  component: privaatsus
+},
   {
       name: 'posts',
       path: '/tellijate_andmed',

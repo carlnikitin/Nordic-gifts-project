@@ -30,7 +30,7 @@
     <img border="0" alt="Estonian" src="../assets/Estonia.png" width="30" height="20">
       </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="https://client-app-nordic.herokuapp.com/eng"><img border="0" src="../assets/Great_Britain.png" width="30" height="20"></a>
+          <router-link :to="{name: 'homeEng'}"><a class="dropdown-item"><img border="0" src="../assets/Great_Britain.png" width="30" height="20"></a></router-link>
         </div>
     </div>
 
@@ -56,14 +56,14 @@
         <div class="col-sm-12 col-lg-6">
           <div class="form-group input-field">
             <label>Telefon (8 numbrit)</label>
-            <input required="required" type="tel" pattern="[0-9]{8}" class="validate form-control" v-model="post.number">
+            <input required="required" type="tel, number" pattern="[0-9]{8}" maxlength="8" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="validate form-control" v-model="post.number">
           </div>
         </div>
         </div>
         <div class="row name justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
-          <number-input  required="required"  placeholder="Kogus (max 10)" :min="1" :max="10" inline controls v-model="post.pieces"></number-input>
+          <number-input  required="required"  placeholder="Kogus (max 10)" :min="1" :max="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57" inline controls v-model="post.pieces"></number-input>
           </div>
         </div>
         </div>
@@ -84,7 +84,8 @@
 <footer>
   <div id="footer-content">
     <h5>info@nordicgifts.ee</h5>
-    <h5>+372 5184 123</h5>
+    <h5 class="privaatsus"><router-link :to="{name: 'privaatsus'}">Privaatsuspoliitika</router-link></h5>
+
   </div>
 </footer>
 
@@ -334,7 +335,7 @@ label {
 
 /*Footer content eg email and phone*/
 #footer-content h5 {
-  margin: 10px;
+  margin: 20px;
 }
 
 
@@ -432,7 +433,7 @@ form {
 /*Footer*/
 footer {
   background: #443838;
-  height: 120px;
+  height: 180px;
   position:relative;
   padding-top: 5px;
   margin-top: 210px;
@@ -445,6 +446,14 @@ footer:before {
  left:0;
  right:0;
  background:linear-gradient(to bottom left, transparent 49%, #443838 50%);
+}
+.md-theme-default a:not(.md-button) {
+  text-decoration: none;
+  color: #fcfcfc;
+}
+.md-theme-default:hover a:not(.md-button):hover{
+  text-decoration: none;
+  color: #b8b8b8;
 }
 h5 {
 color: white;
