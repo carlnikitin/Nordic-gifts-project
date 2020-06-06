@@ -448,11 +448,11 @@ color: white;
 text-align: center;
 font-family: 'Catamaran', sans-serif;
 }
-.md-theme-default a:not(.md-button) {
+a {
   text-decoration: none;
   color: #fcfcfc;
 }
-.md-theme-default:hover a:not(.md-button):hover{
+a:hover{
   text-decoration: none;
   color: #b8b8b8;
 }

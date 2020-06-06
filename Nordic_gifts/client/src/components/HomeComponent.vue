@@ -56,7 +56,7 @@
         <div class="col-sm-12 col-lg-6">
           <div class="form-group input-field">
             <label>Telefon (8 numbrit)</label>
-            <input required="required" type="tel, number" pattern="[0-9]{8}" maxlength="8" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="validate form-control" v-model="post.number">
+            <input required="required" type="tel" pattern="[0-9]{8}" maxlength="8" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="validate form-control" v-model="post.number">
           </div>
         </div>
         </div>
@@ -84,7 +84,8 @@
 <footer>
   <div id="footer-content">
     <h5>info@nordicgifts.ee</h5>
-    <h5 class="privaatsus"><router-link :to="{name: 'privaatsus'}">Privaatsuspoliitika</router-link></h5>
+    <h5>+372 5184 123</h5>
+    <h5 class="privaat"><router-link :to="{name: 'privaatsus'}">Privaatsuspoliitika</router-link></h5>
 
   </div>
 </footer>
@@ -447,11 +448,11 @@ footer:before {
  right:0;
  background:linear-gradient(to bottom left, transparent 49%, #443838 50%);
 }
-.md-theme-default a:not(.md-button) {
+a {
   text-decoration: none;
   color: #fcfcfc;
 }
-.md-theme-default:hover a:not(.md-button):hover{
+a:hover{
   text-decoration: none;
   color: #b8b8b8;
 }
