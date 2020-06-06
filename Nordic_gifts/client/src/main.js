@@ -28,6 +28,8 @@ Vue.config.productionTip = false;
 
 import IndexComponent from './views/IndexComponent.vue';
 import EditComponent from './views/EditComponent.vue';
+import privaatsus from './views/privaatsus.vue';
+import privacy from './views/privacy.vue';
 
 
 const routes = [
@@ -49,7 +51,7 @@ const routes = [
 {
   path: "/privacypolicy",
   name: "privacy",
-  component: privaatsus
+  component: privacy
 },
   {
       name: 'posts',
