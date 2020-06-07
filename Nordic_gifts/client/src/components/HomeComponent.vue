@@ -525,6 +525,9 @@ label {
 .dropdown-item:hover, .dropdown-item, .dropdown-item:visited {
   background-color: #333;
 }
+.dropdown-item {
+  padding: .22rem 1.5rem;
+}
 
 .btn:hover {
   background-color: #333;
