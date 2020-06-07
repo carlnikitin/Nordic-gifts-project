@@ -72,7 +72,7 @@
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
             <label></label>
-            <textarea class="form-control" v-model="post.body" rows="5" placeholder="Want to add something to your souvenir? Let us know here"></textarea>
+            <textarea class="form-control" v-model="post.body" rows="4" maxlength="300" placeholder="Want to add something to your souvenir? Let us know here"></textarea>
           </div>
         </div>
         </div>
@@ -86,7 +86,7 @@
   <div id="footer-content">
     <h5>info@nordicgifts.ee</h5>
     <h5>+372 5184 123</h5>
-    <h5 class="privaatsus"><router-link :to="{name: 'privacy'}">Privacy Policy</router-link></h5>
+    <a href="privacypolicy"><h5>Privacy Policy</h5></a>
   </div>
 </footer>
 
@@ -451,6 +451,9 @@ font-family: 'Catamaran', sans-serif;
 a {
   text-decoration: none;
   color: #e6e6e6;
+  justify-content: center;
+  display: block;
+  font-size: 20px;
 }
 a:hover{
   text-decoration: none;

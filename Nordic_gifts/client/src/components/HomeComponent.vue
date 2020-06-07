@@ -71,7 +71,7 @@
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
             <label></label>
-            <textarea class="form-control" v-model="post.body" rows="5" placeholder="Soovid midagi lisada oma suveniirile? Anna meile teada"></textarea>
+            <textarea class="form-control" v-model="post.body" rows="4" maxlength="300" placeholder="Soovid midagi lisada oma suveniirile? Anna meile teada"></textarea>
           </div>
         </div>
         </div>
@@ -85,7 +85,7 @@
   <div id="footer-content">
     <h5>info@nordicgifts.ee</h5>
     <h5>+372 5184 123</h5>
-    <h5 class="privaat"><router-link :to="{name: 'privaatsus'}">Privaatsuspoliitika</router-link></h5>
+    <a href="privaatuspoliitika">Privaatsuspoliitika</a>
 
   </div>
 </footer>
@@ -451,6 +451,9 @@ footer:before {
 a {
   text-decoration: none;
   color: #e6e6e6;
+  justify-content: center;
+  display: block;
+  font-size: 20px;
 }
 a:hover{
   text-decoration: none;
