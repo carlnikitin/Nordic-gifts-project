@@ -86,7 +86,7 @@
   <div id="footer-content">
     <h5>info@nordicgifts.ee</h5>
     <h5>+372 5184 123</h5>
-    <a href="privacypolicy"><h5>Privacy Policy</h5></a>
+    <a href="privacypolicy">Privacy Policy</a>
   </div>
 </footer>
 
@@ -452,7 +452,7 @@ a {
   text-decoration: none;
   color: #e6e6e6;
   justify-content: center;
-  display: block;
+  display: flex;
   font-size: 20px;
 }
 a:hover{

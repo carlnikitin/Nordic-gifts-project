@@ -452,7 +452,7 @@ a {
   text-decoration: none;
   color: #e6e6e6;
   justify-content: center;
-  display: block;
+  display: flex;
   font-size: 20px;
 }
 a:hover{
