@@ -17,6 +17,15 @@ let Post = new Schema({
   },
   body: {
     type: String
+  },
+  head: {
+    type: String
+  },
+  pbody: {
+    type: String
+  },
+  legs: {
+    type: String
   }
 },{
     collection: 'posts'

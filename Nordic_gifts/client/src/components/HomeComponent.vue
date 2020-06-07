@@ -67,6 +67,9 @@
           </div>
         </div>
         </div>
+        <input type="hidden" v-model="post.head"/>
+        <input type="hidden" v-model="post.pbody"/>
+        <input type="hidden" v-model="post.legs"/>
         <div class="row name justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
@@ -106,7 +109,6 @@ export default {
     data () {
         return {
             logo: require('@/assets/logo.png'),
-            head: null,
             index2: 0,
             imagesHead: [
       require('@/assets/Head/head.png'),
@@ -158,14 +160,17 @@ export default {
       },
             loadFeet() {
         this.feet = this.imagesFeet[this.index];
+        this.post.legs = "https://client-app-nordic.herokuapp.com" + this.feet;
         this.index = (this.index + 1) % this.imagesFeet.length;
     },
       loadBody() {
         this.body = this.imagesBody[this.index1];
+        this.post.pbody = "https://client-app-nordic.herokuapp.com" + this.body;
         this.index1 = (this.index1 + 1) % this.imagesBody.length;
     },
       loadHead() {
         this.head = this.imagesHead[this.index2];
+        this.post.head = "https://client-app-nordic.herokuapp.com" + this.head;
         this.index2 = (this.index2 + 1) % this.imagesHead.length;
     },
 }
@@ -454,6 +459,8 @@ a {
   justify-content: center;
   display: flex;
   font-size: 20px;
+  width: 10%;
+  margin: auto;
 }
 a:hover{
   text-decoration: none;
@@ -581,6 +588,9 @@ h1 {
   }
   .app {
     width: 100vw !important;
+  }
+  a {
+    width: 40%;
   }
   /*Language selector*/
 .dropdown {

@@ -45,11 +45,14 @@ postRoutes.route('/update/:id').post(function (req, res) {
     if (!post)
       res.status(404).send("data is not found");
     else {
-        post.name = req.body.name;
-        post.email = req.body.email;
-        post.number = req.body.number;
-        post.pieces = req.body.pieces;
-        post.body = req.body.body;
+      post.name = req.body.name;
+      post.email = req.body.email;
+      post.number = req.body.number;
+      post.pieces = req.body.pieces;
+      post.body = req.body.body;
+      post.head = req.body.head;
+      post.pbody = req.body.pbody;
+      post.legs = req.body.legs;
         post.save().then(() => {
           res.json('Update complete');
       })

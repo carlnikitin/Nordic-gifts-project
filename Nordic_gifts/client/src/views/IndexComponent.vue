@@ -13,6 +13,9 @@
               <th>Number</th>
               <th>Tükki Arv</th>
               <th>Muu info</th>
+              <th>Pea pilt</th>
+              <th>Keha pilt</th>
+              <th>Jala pilt</th>
               <th>Muuda/Kustuta</th>
             </tr>
             </thead>
@@ -24,6 +27,9 @@
                   <td>{{ post.number }}</td>
                   <td>{{ post.pieces }}</td>
                   <td>{{ post.body }}</td>
+                  <td>{{ post.head }}</td>
+                  <td>{{ post.pbody }}</td>
+                  <td>{{ post.legs }}</td>
                   <td><router-link :to="{name: 'edit', params: { id: post._id }}" class="edit-button btn btn-primary">Muuda/Kustuta</router-link></td>
                 </tr>
             </tbody>
@@ -58,6 +64,9 @@
 body {
     background-image: url("~@/assets/background.png");
     background-size: auto;
+}
+.table td, .table th {
+  padding: 4px;
 }
 .delete-button {
   background-color: #E64B4B ;
