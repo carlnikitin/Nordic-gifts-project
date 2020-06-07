@@ -88,7 +88,7 @@
   <div id="footer-content">
     <h5>info@nordicgifts.ee</h5>
     <h5>+372 5184 123</h5>
-    <a href="privaatuspoliitika">Privaatsuspoliitika</a>
+    <a class="privaatsus" href="privaatuspoliitika">Privaatsuspoliitika</a>
 
   </div>
 </footer>
@@ -459,6 +459,13 @@ a {
   justify-content: center;
   display: flex;
   font-size: 20px;
+}
+.privaatsus {
+    text-decoration: none;
+  color: #e6e6e6;
+  justify-content: center;
+  display: flex;
+  font-size: 20px;
   width: 10%;
   margin: auto;
 }
@@ -589,7 +596,7 @@ h1 {
   .app {
     width: 100vw !important;
   }
-  a {
+  .privaatsus {
     width: 40%;
   }
   /*Language selector*/

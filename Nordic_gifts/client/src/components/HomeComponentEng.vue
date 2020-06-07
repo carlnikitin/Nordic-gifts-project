@@ -460,6 +460,13 @@ a {
   justify-content: center;
   display: flex;
   font-size: 20px;
+}
+.privaatsus {
+    text-decoration: none;
+  color: #e6e6e6;
+  justify-content: center;
+  display: flex;
+  font-size: 20px;
   width: 10%;
   margin: auto;
 }
@@ -577,7 +584,7 @@ h1 {
     width: 200px !important;
     margin: 0px auto -10px auto;
   }
-  a {
+  .privaatsus {
     width: 40%;
   }
   .body, .feet {
