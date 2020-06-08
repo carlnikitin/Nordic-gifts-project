@@ -109,7 +109,7 @@ export default {
     data () {
         return {
             logo: require('@/assets/logo.png'),
-            head: null,
+            head: "",
             index2: 0,
             imagesHead: [
       require('@/assets/Head/head.png'),
@@ -117,7 +117,7 @@ export default {
       require('@/assets/Head/head2.png'),
       require('@/assets/Head/head3.png')
       ],
-            body: null,
+            body: "",
             index1: 0,
             imagesBody: [
       require('@/assets/Body/body.png'),
@@ -126,7 +126,7 @@ export default {
       require('@/assets/Body/body3.png'),
       require('@/assets/Body/body4.png')
       ],
-            feet: null,
+            feet: "",
             index: 0,
             imagesFeet: [
       require('@/assets/Feet/feet.png'),
@@ -522,8 +522,8 @@ label {
 
   background-color: #333;
 }
-.dropdown-item {
-  padding: .22rem 1.5rem;
+.dropdown-menu {
+  padding: .25rem 0;
 }
 
 .btn:hover {

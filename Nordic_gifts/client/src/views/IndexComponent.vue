@@ -27,9 +27,9 @@
                   <td>{{ post.number }}</td>
                   <td>{{ post.pieces }}</td>
                   <td>{{ post.body }}</td>
-                  <td>{{ post.head }}</td>
-                  <td>{{ post.pbody }}</td>
-                  <td>{{ post.legs }}</td>
+                  <td><a v-bind:href="post.head">{{ post.head }}</a></td>
+                  <td><a v-bind:href="post.pbody">{{ post.pbody }}</a></td>
+                  <td><a v-bind:href="post.legs">{{ post.legs }}</a></td>
                   <td><router-link :to="{name: 'edit', params: { id: post._id }}" class="edit-button btn btn-primary">Muuda/Kustuta</router-link></td>
                 </tr>
             </tbody>
